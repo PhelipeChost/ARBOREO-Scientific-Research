@@ -1,0 +1,148 @@
+body {
+    background: url("Imagens/Fundo-pagcadastro.png")  black;
+    background-repeat: no-repeat;
+}
+
+.logo-circular-principal {
+    border-radius: 100%; 
+    padding: 10px;
+    text-align: center;
+}
+
+/* Iniciar Sessão */
+
+.container-sessão {
+    background: white;
+    width: 650px;
+    height: 950px;
+    margin-left: auto;
+    margin-right: 100px;
+    margin-top: 10px;
+    padding: 20px;
+    margin-bottom: auto;
+}
+
+.titulo {
+    font-family: impact;
+    margin-top: 110px;
+    text-align: center;
+    font-size: 45px;
+}
+
+.usuario-container {  
+    width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+    padding: 10px;
+}
+
+.conta_existente {
+    color: red;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-bottom: -10px;
+    padding: 10px;
+}
+
+.input {
+    font-size: 18px;
+    font-family: monospace;
+    font-weight: 700;
+    width: 450px;
+}
+
+#email {
+    margin-top: 5px;
+    display: block;
+    padding: 25px;
+    border-radius: 5px;   
+}
+
+#email::placeholder {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+#email:placeholder-shown {
+    border: 2px solid black;  
+}
+
+#usuario {
+    margin-top: 5px;
+    display: block;
+    padding: 25px;
+    border-radius: 5px;
+}
+
+#usuario::placeholder {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+#usuario:placeholder-shown {
+    border: 2px solid black;
+}
+
+#senha {
+    margin-top: 5px;
+    display: block;
+    padding: 25px;
+    border-radius: 5px;
+}
+
+#senha::placeholder {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+#senha:placeholder-shown {
+    border: 2px solid black;
+}
+
+.btn {
+    position: relative;
+    float: right;
+    left: 10px;
+    border: none;
+    top: auto;
+    margin-top: -65px;
+    margin-right: 20px;
+
+}
+.avancar {
+    background: white; 
+    margin-top: 40px; 
+    width: 120px;
+    height: 120px; 
+    padding: 20px;
+    font-size: 17px;
+    font-weight: 600;
+    border-radius: 25%;
+    margin-bottom: 20px;
+}
+
+.criar-conta {
+    padding: 5px;
+    font-size: 18px; 
+    color: black; 
+    text-decoration: none; 
+    font-weight: 500;
+    transition: all 0.5s;
+}
+
+.criar-conta:hover {
+    box-shadow: 0px 2px 0px black;
+    text-decoration: none;
+    color: black;
+}
+
+/* FIM Iniciar Sessão */
+
+/* Barra vermelha */
+
+#container-red {
+    background: Crimson;
+    padding: 50px;
+}
