@@ -21,6 +21,10 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/begin-session', [App\Http\Controllers\AuthenticateController::class, 'Authenticate']);
+Route::get('/start-registration', [App\Http\Controllers\RegisteredController::class, 'Registered']);
+
+
 
 Route::get('/map', function () {
     return view('livewire.unesp-location');

@@ -2,15 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
+use App\Http\Controllers;
+use App\Models\Feature;
+use Illuminate\Http\Request;
 
-class CreateController extends Controller
+class RegisteredController extends Controller
 {
-    
-    
-    public function Create()
+    public function Registered(): \Illuminate\Contracts\View\View|\Illuminate\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\Foundation\Application
     {
-        return view('features.Create');
+        return view('registered');
     }
 }
- 

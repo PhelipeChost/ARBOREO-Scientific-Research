@@ -8,7 +8,11 @@
     <script src="https://api.mapbox.com/mapbox-gl-js/v3.2.0/mapbox-gl.js"></script>
     <style>
         body { margin: 0; padding: 0; }
-        #map { position: absolute; top: 0; bottom: 0; width: 100%; margin-top: 50px; margin-bottom: 50px;}
+        #map { position: absolute; top: 0; bottom: 0; width: 100%;}
+
+        @media (max-width: 700px) {
+            #map { position: absolute; top: 0; bottom: 0; width: 700px; height: 1080px;}
+        }
     </style>
 </head>
 <body>
@@ -69,7 +73,7 @@
                 'type': 'circle',
                 'source': 'places',
                 'paint': {
-                    'circle-color': 'lightgreen',
+                    'circle-color': 'red',
                     'circle-radius': 6,
                     'circle-stroke-width': 2,
                     'circle-stroke-color': '#ffffff'
