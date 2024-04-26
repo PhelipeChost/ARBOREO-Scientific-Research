@@ -1,4 +1,4 @@
-<form action="{{ route('features.store') }}" method="POST">
+<form action="{{ route('features.store') }}" method="POST" enctype="multipart/form-data">
     @csrf
     <label for="description">Descrição:</label>
     <input type="text" name="description" id="description">
