@@ -1,8 +1,8 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-use App\Http\Livewire\MapLocation;
-use App\Http\Controllers\Controller;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,25 +14,24 @@ use App\Http\Controllers\Controller;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//   return view('home');
+// });
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/begin-session', [App\Http\Controllers\AuthenticateController::class, 'Authenticate']);
+Route::get('/', [App\Http\Controllers\IndexController::class, 'index']);
+Route::get('/login', [App\Http\Controllers\AuthenticateController::class, 'Authenticate']);
 Route::get('/start-registration', [App\Http\Controllers\RegisteredController::class, 'Registered']);
+Route::get('/forgot-password', [App\Http\Controllers\PassForgotController::class, 'PassForgot']);
 
+// a parte
 
-
-Route::get('/map', function () {
-    return view('livewire.unesp-location');
-})->name('map');
+Route::get('/map', [App\Http\Controllers\MapController::class, 'map']);
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'Home'])->name('home');
 Route::get('/create', [App\Http\Controllers\CreateController::class, 'Create'])->name('features.Create');
 
 Route::any('/features', [App\Http\Controllers\FeatureController::class, 'store'])->name('features.store');

@@ -43,19 +43,26 @@
    <header id="header" class="row">
 
    		<div class="header-logo">
-	        <a href="{{ url ('Home')}}">Dazzle</a>
+	        <img src="{{ url('Assets/images/UNESP-logo.png') }}" alt="" width="40">
 	    </div>
 
 	   	<nav id="header-nav-wrap">
 			<ul class="header-main-nav">
 				<li class="current"><a class="smoothscroll"  href="#home" title="home">Home</a></li>
+                <li><a class="smoothscroll"  href="#features" title="Features">Features</a></li>
                 <li><a class="smoothscroll"  href="#about" title="about">About</a></li>
-				<li><a class="smoothscroll"  href="#pricing" title="pricing">Pricing</a></li>
 				<li><a class="smoothscroll"  href="#testimonials" title="testimonials">Testimonials</a></li>
-				<li><a class="smoothscroll"  href="#download" title="download">Download</a></li>
+                <li><a class="smoothscroll"  href="#features" title="Features">Autores</a></li>
+                <li><a class="smoothscroll"  href="#download" title="download">Download</a></li>
 			</ul>
-
-            <a href="{{ url('begin-session') }}" title="sign-up" class="button button-primary cta">Sign Up</a>
+            <div class="button button-primary cta">
+                <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('frm-logout').submit();" style="text-decoration: none; color: white;">
+                    Logout
+                </a>
+                <form id="frm-logout" action="{{ __('logout') }}" method="POST" style="display: none;">
+                    {{ csrf_field() }}
+                </form>
+            </div>
 		</nav>
 
 		<a class="header-menu-toggle" href="#"><span>Menu</span></a>
@@ -89,33 +96,26 @@
                             Mapa Unesp
                         </a>
                     </div>
-
-                </div>
-
-                <div class="home-image-right">
-                    <img src="{{ url('Assets/images/iphone-app-470.png') }}"
-                        srcset="{{ url('Assets/images/iphone-app-470.png 1x') }}, {{ url('Assets/images/iphone-app-940.png 2x') }}"
-                        data-aos="fade-up" alt="">
                 </div>
             </div>
-
+            <ul class="home-social-list">
+                <li>
+                    <a href="#"><i class="fa fa-facebook-square"></i></a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-instagram"></i></a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-youtube-play"></i></a>
+                </li>
+            </ul>
+            <!-- end home-social-list -->
         </div> <!-- end home-content -->
 
-        <ul class="home-social-list">
-            <li>
-                <a href="#"><i class="fa fa-facebook-square"></i></a>
-            </li>
-            <li>
-                <a href="#"><i class="fa fa-twitter"></i></a>
-            </li>
-            <li>
-                <a href="#"><i class="fa fa-instagram"></i></a>
-            </li>
-            <li>
-                <a href="#"><i class="fa fa-youtube-play"></i></a>
-            </li>
-        </ul>
-        <!-- end home-social-list -->
+
 
         <div class="home-scrolldown">
             <a href="#about" class="scroll-icon smoothscroll">

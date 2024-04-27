@@ -1,89 +1,88 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-
 <head>
-    <link rel="stylesheet" href="{{ url('Assets/bootstrap/bootstrap-3.3.7-dist/css1/bootstrap.min.css') }}">
-
-    <link rel="stylesheet" href="{{ url('Assets/css/register.css') }}">
-
-    <link rel="icon" href="{{ url('Assets/images/home-logo.png') }}">
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Criar Conta</title>
+    <title>Monsterlessons Academy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{{url('Assets/css/registered.css')}}" />
+    <script src="{{ url('Assets/src/auth.js')}}" defer></script>
 </head>
-
 <body>
-
-<div style="background: black; box-shadow: 0 0 2px white;">
-    <img src="{{ url('Assets/images/home-logo-circular.png') }}" class="img-fluid logo-circular-principal" width="100" alt="">
-</div>
-
-<div class="img-responsive container-sessão">
-    <h1 class="col titulo">Criar Conta</h1>
-    <form class="form-floating" method="POST" action="{{ route('register') }}">
+<div class="form-container">
+    <div class="form-container__details">
+        <div class="form-container__title">Cadastrar</div>
+        <div class="form-container__subtitle">
+            Seja bem vindo ao Arbóreo Unesp
+        </div>
+    </div>
+    <form class="form" method="POST" action="{{ route('register') }}">
         @csrf
-        <div class="img-responsive usuario-container">
-            <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('Name') }}</label>
-            <input class="img-responsive input @error('name') is-invalid @enderror" name="name" placeholder="Nome Completo" id="usuario" value="{{ old('name') }}" required autocomplete="name" autofocus>
+        <div class="form__field">
+            <label for="name" class="form__label">{{ __('Name') }}</label>
+            <input id="name" class="form__input @error('name') is-invalid @enderror"
+                   name="name" placeholder="Nome Completo"
+                   value="{{ old('name') }}"
+                   required
+                   autocomplete="name"
+                   autofocus />
             @error('name')
             <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
             @enderror
-
-            <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Email Address') }}</label>
-            <input class="img-responsive input @error('email') is-invalid @enderror" type="email" name="email" placeholder="Email" id="email" maxlength="50" value="{{ old('email') }}" required autocomplete="email">
+        </div>
+        <div class="form__field">
+            <label for="email" class="form__label">{{ __('Email Address') }}</label>
+            <input id="email" class="form__input @error('email') is-invalid @enderror"
+                   type="email"
+                   name="email"
+                   placeholder="Email"
+                   maxlength="50"
+                   value="{{ old('email') }}"
+                   required autocomplete="email"/>
             @error('email')
             <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
             @enderror
-
-            <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('Password') }}</label>
-            </label><input id="password" class="img-responsive input display @error('password') is-invalid @enderror" name="password" type="password" placeholder="Senha" minlength="8" maxlength="16" style="margin-top: 30px;" required autocomplete="new-password">
+        </div>
+        <div class="form__field">
+            <label for="password" class="form__label">{{ __('Password') }}</label>
+            <input id="password" class="form__input @error('password') is-invalid @enderror"
+                   name="password"
+                   type="password"
+                   placeholder="Password"
+                   minlength="8"
+                   maxlength="16"
+                   required
+                   autocomplete="new-password"/>
+            <button type="button" class="btn" onclick="passwordOne()"><img src="{{ url('Assets/images/icons/showPassword.png') }}" width="40" alt="showPassword"></button>
             @error('password')
             <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
+                <strong>{{ $message }}</strong>
+            </span>
             @enderror
-
-            <label for="password-confirm" class="col-md-4 col-form-label text-md-end">{{ __('Confirm Password') }}</label>
-            <input class="img-responsive input display @error('password-confirm') is-invalid @enderror" type="password" name="password_confirmation" placeholder="Senha" id="senha" minlength="8" maxlength="16" style="margin-top: 30px;" required autocomplete="new-password">
-
-
-            <button type="button" class="btn" onclick="mostrarSenha()"><img src="{{ url('Assets/images/olhinho-ohayo.png') }}" width="40" alt=""></button>
         </div>
 
-        <script>
-            function mostrarSenha() {
-                const tipo = document.getElementById("senha");
-                if(tipo.type === "password") {
-                    tipo.type = "text";
-                }else{
-                    tipo.type = "password";
-                }
-            }
-        </script>
-
-        <div class="img-responsive" style="margin-top: 30px;">
-            <div style="text-align: center;"><button type="submit" class="avancar">{{ __('Register') }}</button></div>
-            <div style="text-align: center;"><a href="{{ url('begin-session') }}" class="criar-conta">Já tenho uma conta</a></div>
-
+        <div class="form__field">
+            <label for="password-confirm" class="form__label">{{ __('Confirm Password') }}</label>
+            <input id="password-confirm" class="form__input @error('password-confirm') is-invalid @enderror"
+                   name="password_confirmation"
+                   type="password"
+                   placeholder="Password Confirmation"
+                   minlength="8"
+                   maxlength="16"
+                   required
+                   autocomplete="new-password"/>
         </div>
+        <button type="submit" value="submit" class="form__submit">
+            {{ __('Register') }}
+        </button>
     </form>
+    <div class="form-container__line-divider"></div>
+    <div class="form-container__links">
+        <a href="{{url('login')}}" class="form-container__link">Login</a>
+        <a href="{{ route('password.request') }}" class="form-container__link">{{ __('Forgot Your Password?') }}</a>
+    </div>
 </div>
-
-<!-- barra vermelha -->
-<div class="container-fluid" id="container-red"></div>
-<!-- FIM barra vermelha -->
-
 </body>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
-
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
 </html>
