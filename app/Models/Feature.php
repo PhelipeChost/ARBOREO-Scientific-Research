@@ -2,11 +2,15 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Feature extends Model
 {
+    /**
+     * @var false|mixed|string
+     */
+    public mixed $description;
+    public mixed $longitude;
     protected $table = 'features'; // Nome da tabela no banco de dados
 
     protected $fillable = ['description', 'longitude', 'latitude']; // Colunas que podem ser atribuídas em massa

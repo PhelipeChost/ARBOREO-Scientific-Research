@@ -2,12 +2,15 @@
 
 namespace App\Http\Controllers;
 use App\Models\Feature;
+use Illuminate\Http\JsonResponse;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 
 class FeatureController extends Controller
 {
 
-    public function store(Request $request) {
+    public function store(Request $request): JsonResponse|RedirectResponse
+    {
         // Se a requisição for do tipo POST, significa que estamos adicionando uma nova marcação
         if ($request->isMethod('post')) {
             // Valide os dados do formulário para criar uma nova marcação

@@ -1,13 +1,13 @@
 <?php
 namespace App\Http\Controllers;
 
-use App\Http\Controllers;
-use App\Models\Feature;
-use Illuminate\Http\Request;
+use Illuminate\Contracts\View\Factory;
+use Illuminate\Contracts\View\View;
+use Illuminate\Foundation\Application;
 
 class AuthenticateController extends Controller
 {
-    public function Authenticate(): \Illuminate\Contracts\View\View|\Illuminate\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\Foundation\Application
+    public function Authenticate(): View|Application|Factory|\Illuminate\Contracts\Foundation\Application
     {
         return view('authenticate');
     }

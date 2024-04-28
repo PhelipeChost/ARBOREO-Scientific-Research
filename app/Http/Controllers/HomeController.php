@@ -22,7 +22,7 @@ class HomeController extends Controller
      *
      * @return Renderable
      */
-    public function Home()
+    public function Home(): Renderable
     {
         return view('home');
     }
