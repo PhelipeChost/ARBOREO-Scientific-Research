@@ -52,7 +52,7 @@
                 <li><a class="smoothscroll"  href="#features" title="Features">Features</a></li>
                 <li><a class="smoothscroll"  href="#about" title="about">About</a></li>
 				<li><a class="smoothscroll"  href="#testimonials" title="testimonials">Testimonials</a></li>
-                <li><a class="smoothscroll"  href="#features" title="Features">Autores</a></li>
+                <li><a href="{{ url('home/inventory') }}" title="Features">Inventário</a></li>
                 <li><a class="smoothscroll"  href="#download" title="download">Download</a></li>
 			</ul>
             <div class="button button-primary cta">
