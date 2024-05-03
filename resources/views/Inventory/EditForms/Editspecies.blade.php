@@ -1,7 +1,6 @@
-
 @include('inventory.header')
-<?php       
-      $codautor = $_GET["codautor"];
+<?php
+      $codespecie = $_GET["codespecie"];
 
       require 'Assets/Inventory/vendor/autoload.php';
 
@@ -13,31 +12,31 @@
   ]);
   
  
-   $url = 'http://localhost:8090/inventario/autores/'.$codautor;
+   $url = 'http://inventarioarboreo.feis.unesp.br:8090/inventario/especies'.$codespecie;
   
    $response = $client->request('GET', $url,[]);
     
-   // echo "Status: " . $response->getStatusCode() . PHP_EOL;
+   //echo "Status: " . $response->getStatusCode() . PHP_EOL;
     
    $data = json_decode($response->getBody() );
 
 ?>
-<h1>Editar Autor</h1>
+<h1>Editar Espécies</h1>
 
 
-    <form action="{{ url('change-author')}}" method="GET">
-    <input class="form-control" type="hidden" name="codautor" 
-                value="<?php echo $data->codautor;?>"/>
+    <form action="altera-especie.php" method="GET">
+    <input class="form-control" type="hidden" name="codespecie" 
+                value="<?php echo $data->codespecie;?>"/>
         <table class="table">
 
             <tr>
-                <td>Autor:</td>
+                <td>Espécie:</td>
                 <td><input class="form-control" type="text"
-                placeholder="Nome do Autor" name="nomeautor" 
-                value="<?php echo $data->nomeautor;?>" required/></td>
+                placeholder="Espécie" name="nomeespecie" 
+                value="<?php echo $data->nomeespecie;?>" required/></td>
             </tr>
         </table>
         
         <input  class="btn btn-outline-primary" type="submit" value="Alterar"/>
     </form>
-@include('inventory.baseboard');?>
+@include('inventory.baseboard')

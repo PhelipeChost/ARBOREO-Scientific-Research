@@ -6,10 +6,10 @@ use App\Http\Controllers\Inventory\EditForms;
 use Illuminate\Routing\Controller;
 
 //rodapé
-class EditauthorController extends Controller
+class EditspeciesController extends Controller
 {
-    public function Editauthor(): \Illuminate\Contracts\View\View|\Illuminate\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\Foundation\Application
+    public function Editspecies(): \Illuminate\Contracts\View\View|\Illuminate\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\Foundation\Application
     {
-        return view('inventory.editforms.editauthor');
+        return view('inventory.editforms.editspecies');
     }
 }

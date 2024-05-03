@@ -50,11 +50,32 @@ Route::get('/menu', [App\Http\Controllers\Inventory\MenuController::class, 'menu
 
     // EditForms (Editar Formulários)
     Route::get('/edit-author', [App\Http\Controllers\Inventory\EditForms\EditAuthorController::class, 'editauthor'])->name('inventory.editforms.editauthor');
-    Route::get('/edit-genres', [App\Http\Controllers\Inventory\EditForms\EditgenresController::class, 'editauthor'])->name('inventory.editforms.editauthor');
-    Route::get('/edit-phones', [App\Http\Controllers\Inventory\EditForms\EditphonesController::class, 'editauthor'])->name('inventory.editforms.editauthor');
-    Route::get('/edit-products', [App\Http\Controllers\Inventory\EditForms\EditAuthorController::class, 'editauthor'])->name('inventory.editforms.editauthor');
-    Route::get('/edit-species', [App\Http\Controllers\Inventory\EditForms\EditAuthorController::class, 'editauthor'])->name('inventory.editforms.editauthor');
+    Route::get('/edit-genres', [App\Http\Controllers\Inventory\EditForms\EditgenresController::class, 'editgenres'])->name('inventory.editforms.editgenres');
+    Route::get('/edit-phones', [App\Http\Controllers\Inventory\EditForms\EditphonesController::class, 'editphones'])->name('inventory.editforms.editphonesr');
+    Route::get('/edit-products', [App\Http\Controllers\Inventory\EditForms\EditproductsController::class, 'editproducts'])->name('inventory.editforms.editproducts');
+    Route::get('/edit-species', [App\Http\Controllers\Inventory\EditForms\EditspeciesController::class, 'editspecies'])->name('inventory.editforms.editspecies');
 
+    // ChangeForms (processo de edição de formulário que altera os registros Formulários)
+    Route::get('/change-author', [App\Http\Controllers\Inventory\ChangeForms\ChangeAuthorController::class, 'changeauthor'])->name('inventory.changeforms.changeauthor');
+    Route::get('/change-genres', [App\Http\Controllers\Inventory\ChangeForms\ChangeGenresController::class, 'changegenres'])->name('inventory.changeforms.changegenres');
+    Route::get('/change-phones', [App\Http\Controllers\Inventory\ChangeForms\ChangephonesController::class, 'changephones'])->name('inventory.changeforms.changephones');
+    Route::get('/change-products', [App\Http\Controllers\Inventory\ChangeForms\ChangeproductsController::class, 'changeproducts'])->name('inventory.changeforms.changeproducts');
+    Route::get('/change-species', [App\Http\Controllers\Inventory\ChangeForms\ChangespeciesController::class, 'changespecies'])->name('inventory.changeforms.changespecies');
+
+        
+    // SaveForms (processo de salvamento de cadastros)
+    Route::get('/save-author', [App\Http\Controllers\Inventory\SaveForms\SaveAuthorController::class, 'saveauthor'])->name('inventory.saveforms.saveauthor');
+    Route::get('/save-genres', [App\Http\Controllers\Inventory\SaveForms\SaveGenresController::class, 'savegenres'])->name('inventory.saveforms.savegenres');
+    Route::get('/save-phones', [App\Http\Controllers\Inventory\SaveForms\SavephonesController::class, 'savephones'])->name('inventory.saveforms.savephones');
+    Route::get('/save-products', [App\Http\Controllers\Inventory\SaveForms\SaveproductsController::class, 'saveproducts'])->name('inventory.saveforms.saveproducts');
+    Route::get('/save-species', [App\Http\Controllers\Inventory\SaveForms\SavespeciesController::class, 'savespecies'])->name('inventory.saveforms.savespecies');
+
+    // DeleteForms (processo de exclusão de registros)
+    Route::get('/remove-author', [App\Http\Controllers\Inventory\DeleteForms\RemoveAuthorController::class, 'removeauthor'])->name('inventory.deleteforms.removeauthor');
+    Route::get('/remove-genres', [App\Http\Controllers\Inventory\DeleteForms\RemoveGenresController::class, 'removegenres'])->name('inventory.deleteforms.removegenres');
+    Route::get('/remove-phones', [App\Http\Controllers\Inventory\DeleteForms\RemovephonesController::class, 'removephones'])->name('inventory.deleteforms.removephones');
+    Route::get('/remove-products', [App\Http\Controllers\Inventory\DeleteForms\RemoveproductsController::class, 'removeproducts'])->name('inventory.deleteforms.removeproducts');
+    Route::get('/remove-species', [App\Http\Controllers\Inventory\DeleteForms\RemovespeciesController::class, 'removespecies'])->name('inventory.deleteforms.removespecies');
 
 Route::get('/map', [App\Http\Controllers\MapController::class, 'map']);
 

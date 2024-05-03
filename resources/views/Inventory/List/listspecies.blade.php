@@ -23,7 +23,7 @@
   ]);
   
  
-   $url = 'http://localhost:8090/inventario/especies';
+   $url = 'http://inventarioarboreo.feis.unesp.br:8090/inventario/especies';
   
    $response = $client->request('GET', $url,[]);
     
@@ -44,7 +44,7 @@
 
 
       <td>
-        <form action="editar-especie-formulario.php">
+        <form action="{{ url('edit-species')}}">
           <input type="hidden" name="codespecie" value="<?= $detalhes->codespecie;?>">
             <button title="Editar" type="submit" class="btn btn-outline-primary">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pen-fill" viewBox="0 0 16 16">
@@ -54,7 +54,7 @@
         </form>
       </td>
       <td>
-      <form action="remover-especie.php" >
+      <form action="{{ url('remove-species')}}" >
         <input type="hidden" name="codespecie" value="<?= $detalhes->codespecie;?>">
         <button title="Remover" type="submit" class="btn btn-outline-danger">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3-fill" viewBox="0 0 16 16">

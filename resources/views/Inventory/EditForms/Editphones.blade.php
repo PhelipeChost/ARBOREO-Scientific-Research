@@ -1,7 +1,6 @@
-
 @include('inventory.header')
-<?php       
-      $codautor = $_GET["codautor"];
+<?php
+      $codtel = $_GET["codtel"];
 
       require 'Assets/Inventory/vendor/autoload.php';
 
@@ -13,7 +12,7 @@
   ]);
   
  
-   $url = 'http://localhost:8090/inventario/autores/'.$codautor;
+   $url = 'http://localhost:8080/tccmake/telefones/'.$codtel;
   
    $response = $client->request('GET', $url,[]);
     
@@ -22,22 +21,22 @@
    $data = json_decode($response->getBody() );
 
 ?>
-<h1>Editar Autor</h1>
+<h1>Editar Telefone</h1>
 
 
-    <form action="{{ url('change-author')}}" method="GET">
-    <input class="form-control" type="hidden" name="codautor" 
-                value="<?php echo $data->codautor;?>"/>
+    <form action="altera-telefone.php" method="GET">
+    <input class="form-control" type="hidden" name="codtel" 
+                value="<?php echo $data->codtel;?>"/>
         <table class="table">
 
             <tr>
-                <td>Autor:</td>
+                <td>Número Telefone:</td>
                 <td><input class="form-control" type="text"
-                placeholder="Nome do Autor" name="nomeautor" 
-                value="<?php echo $data->nomeautor;?>" required/></td>
+                placeholder="Telefone" name="numero" 
+                value="<?php echo $data->numerotel;?>" required/></td>
             </tr>
         </table>
         
         <input  class="btn btn-outline-primary" type="submit" value="Alterar"/>
     </form>
-@include('inventory.baseboard');?>
+@include('inventory.baseboard')

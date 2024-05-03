@@ -1,6 +1,6 @@
 @include('inventory.header')
         <h1>Cadastro de Autores</h1>
-        <form action="salvar-autor.php" method="POST">
+        <form action="{{ url('save-author')}}" method="POST">
         <table class="table">
             <tr>
                 <td><label for="nomeautor">Autor</label></td>
