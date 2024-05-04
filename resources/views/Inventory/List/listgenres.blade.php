@@ -1,5 +1,5 @@
 @include('inventory.header')
-<table class="table table-striped">
+<table class="table table-dark table-striped">
   <thead>
     <tr>
       <th scope="col">Gêneros Cadastrados</th>
@@ -45,7 +45,7 @@
 
 
       <td>
-        <form action="{{ url('/home/inventory/list-author/edit-genres')}}" method="GET">
+        <form action="{{ url('/home/inventory/list-genres/edit-genres')}}" method="GET">
           <input type="hidden" name="codgenero" value="<?= $detalhes->codgenero;?>">
             <button title="Editar" type="submit" class="btn btn-outline-primary">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pen-fill" viewBox="0 0 16 16">

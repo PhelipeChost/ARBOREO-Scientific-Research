@@ -19,7 +19,7 @@
    //echo "Status: " . $response->getStatusCode() . PHP_EOL;
 
     if($response->getStatusCode()==200){
-    return redirect()->to('list-species')->send();
+    return redirect()->to('home/inventory/list-species')->send();
 
   } else {
       echo $nome . ',não removido!';

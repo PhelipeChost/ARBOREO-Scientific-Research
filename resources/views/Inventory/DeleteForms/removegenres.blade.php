@@ -19,7 +19,7 @@
    //echo "Status: " . $response->getStatusCode() . PHP_EOL;
     
    if($response->getStatusCode()==200){
-    return redirect()->to('list-genres')->send();
+    return redirect()->to('home/inventory/list-genres')->send();
 
   } else {
       echo $nome . ',não removido!';

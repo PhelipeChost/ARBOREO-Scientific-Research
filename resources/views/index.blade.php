@@ -43,7 +43,7 @@
 <header id="header" class="row">
 
     <div class="header-logo">
-        <a href="{{ url ('Home')}}">Dazzle</a>
+        <img src="{{ url('Assets/images/UNESP-logo.png') }}" alt="" width="40">
     </div>
 
     <nav id="header-nav-wrap">
@@ -62,7 +62,7 @@
 
 <!-- home
 ================================================== -->
-<section id="home" data-parallax="scroll" style="background-image: url({{ url('Assets/images/hero-bg.jpg')}})" data-natural-width=3000 data-natural-height=2000>
+<section id="home" data-parallax="scroll" style="background-image: url({{ url('Assets/images/hero-bg2.jpg')}})" data-natural-width=3000 data-natural-height=2000>
 
     <div class="overlay"></div>
     <div class="home-content">
@@ -89,7 +89,7 @@
 
                     <div class="btn btn-info" style="color: white">
                         <img src="{{ url('Assets/images/icons/exclamation.png')}}" alt="" width="20">
-                        Faça o cadastro para acessar nosso inventário!
+                        Faça login para acessar nosso inventário!
                     </div>
                 </div>
 
@@ -97,7 +97,7 @@
 
             <div class="home-image-right">
                 <img src="{{ url('Assets/images/iphone-app-470.png') }}"
-                     srcset="{{ url('Assets/images/iphone-app-470.png 1x') }}, {{ url('Assets/images/iphone-app-940.png 2x') }}"
+                     srcset="{{ url('Assets/images/iphone-app-940-mapbox.png') }}"
                      data-aos="fade-up" alt="">
             </div>
         </div>

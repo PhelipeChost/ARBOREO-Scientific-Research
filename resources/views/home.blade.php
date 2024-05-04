@@ -49,9 +49,6 @@
 	   	<nav id="header-nav-wrap">
 			<ul class="header-main-nav">
 				<li class="current"><a class="smoothscroll"  href="#home" title="home">Home</a></li>
-                <li><a class="smoothscroll"  href="#features" title="Features">Features</a></li>
-                <li><a class="smoothscroll"  href="#about" title="about">About</a></li>
-				<li><a class="smoothscroll"  href="#testimonials" title="testimonials">Testimonials</a></li>
                 <li><a href="{{ url('home/inventory') }}" title="Features">Inventário</a></li>
                 <li><a class="smoothscroll"  href="#download" title="download">Download</a></li>
 			</ul>
@@ -72,7 +69,7 @@
 
    <!-- home
    ================================================== -->
-   <section id="home" data-parallax="scroll" style="background-image: url({{ url('Assets/images/hero-bg.jpg')}})" data-natural-width=3000 data-natural-height=2000>
+   <section id="home" data-parallax="scroll" style="background-image: url({{ url('Assets/images/hero-bg2.jpg')}})" data-natural-width=3000 data-natural-height=2000>
 
         <div class="overlay"></div>
         <div class="home-content">
