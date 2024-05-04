@@ -4,12 +4,12 @@
      //implementar pra chamar a rota do login so spring boot
      use GuzzleHttp\Client;
       
-     $autor = $_POST["nomeautor"];
+     $autor = $_GET["nomeautor"];
 
      $client = new Client();
     
    
-    $url = 'http://localhost:8090/inventario/autores';
+    $url = 'http://inventarioarboreo.feis.unesp.br:8090/inventario/autores';
    
     
      $response = $client->request('POST', $url,[
@@ -24,12 +24,7 @@
     
       
      if($response->getStatusCode() == 200){
-        ?>
-        <script>
-  swal.fire("Sucesso!","Autor cadastrado.","success")
-</script>
-<?php
-        header("Location: lista-autor.php");
+        return redirect()->to('list-author')->send();
      }
       
      //$data = json_decode($response->getBody() );

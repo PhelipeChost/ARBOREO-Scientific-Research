@@ -1,10 +1,8 @@
+@include('inventory.baseboard')
 <?php
-    
-    include("cabecalho.php");
-
     $codigo = $_GET["codgenero"];
     
-    require 'vendor/autoload.php';
+    require 'Assets/Inventory/vendor/autoload.php';
 
    //implementar pra chamar a rota do login so spring boot
    use GuzzleHttp\Client;
@@ -14,26 +12,18 @@
   ]);
   
  
-   $url = 'http://localhost:8080/inventario/generos/'.$codigo;
+   $url = 'http://inventarioarboreo.feis.unesp.br:8090/inventario/autores'.$codigo;
   
-   $response = $client->request('DELETE', $url,[]);
+   $response = $client->delete('http://inventarioarboreo.feis.unesp.br:8090/inventario/generos/' . $codigo);
     
    //echo "Status: " . $response->getStatusCode() . PHP_EOL;
     
    if($response->getStatusCode()==200){
-    header("Location: lista-genero.php");  
+    return redirect()->to('list-genres')->send();
 
-    ?>
-
-  <?php
-  } else { ?>
-    <p class="alert text-danger">   Gênero <?php echo $nome; ?>,não removido!
-    </p>
-<?php
+  } else {
+      echo $nome . ',não removido!';
   }
-
+  
 ?>
-
-   
-
-<?php include("rodape.php"); ?>
+@include('inventory.baseboard')

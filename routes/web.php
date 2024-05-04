@@ -32,28 +32,28 @@ Route::get('/baseboard', [App\Http\Controllers\Inventory\BaseboardController::cl
 Route::get('/menu', [App\Http\Controllers\Inventory\MenuController::class, 'menu'])->name('inventory.menu');
 
     // Registrations (Cadastros)
-    Route::get('/authors', [App\Http\Controllers\Inventory\Registrations\AuthorController::class, 'author'])->name('inventory.registrations.author');
-    Route::get('/genres', [App\Http\Controllers\Inventory\Registrations\GenresController::class, 'genres'])->name('inventory.registrations.genres');
-    Route::get('/phones', [App\Http\Controllers\Inventory\Registrations\PhonesController::class, 'phones'])->name('inventory.registrations.phones');
-    Route::get('/products', [App\Http\Controllers\Inventory\Registrations\ProductsController::class, 'products'])->name('inventory.registrations.products');
-    Route::get('/species', [App\Http\Controllers\Inventory\Registrations\SpeciesController::class, 'species'])->name('inventory.registrations.species');
+    Route::get('/home/inventory/authors', [App\Http\Controllers\Inventory\Registrations\AuthorController::class, 'author'])->name('inventory.registrations.author');
+    Route::get('/home/inventory/genres', [App\Http\Controllers\Inventory\Registrations\GenresController::class, 'genres'])->name('inventory.registrations.genres');
+    Route::get('/home/inventory/phones', [App\Http\Controllers\Inventory\Registrations\PhonesController::class, 'phones'])->name('inventory.registrations.phones');
+    Route::get('/home/inventory/products', [App\Http\Controllers\Inventory\Registrations\ProductsController::class, 'products'])->name('inventory.registrations.products');
+    Route::get('/home/inventory/species', [App\Http\Controllers\Inventory\Registrations\SpeciesController::class, 'species'])->name('inventory.registrations.species');
 
 
     // List (Listar)
-    Route::get('/list-author', [App\Http\Controllers\Inventory\List\ListauthorController::class, 'listauthor'])->name('inventory.list.listauthor');
-    Route::get('/list-genres', [App\Http\Controllers\Inventory\List\ListgenresController::class, 'listgenres'])->name('inventory.list.listgenres');
-    Route::get('/list-phones', [App\Http\Controllers\Inventory\List\ListphonesController::class, 'listphones'])->name('inventory.list.listphones');
-    Route::get('/list-products', [App\Http\Controllers\Inventory\List\ListproductsController::class, 'listproducts'])->name('inventory.list.listproducts');
-    Route::get('/list-species', [App\Http\Controllers\Inventory\List\ListspeciesController::class, 'listspecies'])->name('inventory.list.listspecies');
+    Route::get('/home/inventory/list-author', [App\Http\Controllers\Inventory\List\ListauthorController::class, 'listauthor'])->name('inventory.list.listauthor');
+    Route::get('/home/inventory/list-genres', [App\Http\Controllers\Inventory\List\ListgenresController::class, 'listgenres'])->name('inventory.list.listgenres');
+    Route::get('/home/inventory/list-phones', [App\Http\Controllers\Inventory\List\ListphonesController::class, 'listphones'])->name('inventory.list.listphones');
+    Route::get('/home/inventory/list-products', [App\Http\Controllers\Inventory\List\ListproductsController::class, 'listproducts'])->name('inventory.list.listproducts');
+    Route::get('/home/inventory/list-species', [App\Http\Controllers\Inventory\List\ListspeciesController::class, 'listspecies'])->name('inventory.list.listspecies');
 
 
 
     // EditForms (Editar Formulários)
-    Route::get('/edit-author', [App\Http\Controllers\Inventory\EditForms\EditAuthorController::class, 'editauthor'])->name('inventory.editforms.editauthor');
-    Route::get('/edit-genres', [App\Http\Controllers\Inventory\EditForms\EditgenresController::class, 'editgenres'])->name('inventory.editforms.editgenres');
-    Route::get('/edit-phones', [App\Http\Controllers\Inventory\EditForms\EditphonesController::class, 'editphones'])->name('inventory.editforms.editphonesr');
-    Route::get('/edit-products', [App\Http\Controllers\Inventory\EditForms\EditproductsController::class, 'editproducts'])->name('inventory.editforms.editproducts');
-    Route::get('/edit-species', [App\Http\Controllers\Inventory\EditForms\EditspeciesController::class, 'editspecies'])->name('inventory.editforms.editspecies');
+    Route::get('/home/inventory/list-author/edit-author', [App\Http\Controllers\Inventory\EditForms\EditAuthorController::class, 'editauthor'])->name('inventory.editforms.editauthor');
+    Route::get('/home/inventory/list-genres/edit-genres', [App\Http\Controllers\Inventory\EditForms\EditgenresController::class, 'editgenres'])->name('inventory.editforms.editgenres');
+    Route::get('/home/inventory/list-phones/edit-phones', [App\Http\Controllers\Inventory\EditForms\EditphonesController::class, 'editphones'])->name('inventory.editforms.editphonesr');
+    Route::get('/home/inventory/list-products/edit-products', [App\Http\Controllers\Inventory\EditForms\EditproductsController::class, 'editproducts'])->name('inventory.editforms.editproducts');
+    Route::get('/home/inventory/list-species/edit-species', [App\Http\Controllers\Inventory\EditForms\EditspeciesController::class, 'editspecies'])->name('inventory.editforms.editspecies');
 
     // ChangeForms (processo de edição de formulário que altera os registros Formulários)
     Route::get('/change-author', [App\Http\Controllers\Inventory\ChangeForms\ChangeAuthorController::class, 'changeauthor'])->name('inventory.changeforms.changeauthor');
@@ -64,8 +64,8 @@ Route::get('/menu', [App\Http\Controllers\Inventory\MenuController::class, 'menu
 
         
     // SaveForms (processo de salvamento de cadastros)
-    Route::get('/save-author', [App\Http\Controllers\Inventory\SaveForms\SaveAuthorController::class, 'saveauthor'])->name('inventory.saveforms.saveauthor');
-    Route::get('/save-genres', [App\Http\Controllers\Inventory\SaveForms\SaveGenresController::class, 'savegenres'])->name('inventory.saveforms.savegenres');
+    Route::get('/save-author', [App\Http\Controllers\Inventory\SaveForms\SaveauthorController::class, 'saveauthor'])->name('inventory.saveforms.saveauthor');
+    Route::get('/save-genres', [App\Http\Controllers\Inventory\SaveForms\SavegenresController::class, 'savegenres'])->name('inventory.saveforms.savegenres');
     Route::get('/save-phones', [App\Http\Controllers\Inventory\SaveForms\SavephonesController::class, 'savephones'])->name('inventory.saveforms.savephones');
     Route::get('/save-products', [App\Http\Controllers\Inventory\SaveForms\SaveproductsController::class, 'saveproducts'])->name('inventory.saveforms.saveproducts');
     Route::get('/save-species', [App\Http\Controllers\Inventory\SaveForms\SavespeciesController::class, 'savespecies'])->name('inventory.saveforms.savespecies');

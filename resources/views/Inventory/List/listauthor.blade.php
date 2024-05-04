@@ -1,19 +1,20 @@
 @include('inventory.header')
-            <h1>Autores Cadastrados</h1>
-
-<table class="table table-striped">
+<table class="table table-dark table-striped">
   <thead>
+    <tr>
+      <th scope="col">Autores Cadastrados</th>
+    </tr>
     <tr>
       <th scope="col">Código</th>
       <th scope="col">Autor</th>
-      <th scope="col"></th>
-      <th scope="col"></th>
+      <th scope="col" style="color: rgb(61, 73, 241);">Editar</th>
+      <th scope="col" style="color: red;">Remover</th>
     </tr>
   </thead>
   <tbody class="table-group-divider">
   <?php
 
-  require 'Assets/vendor/requires-inventory/autoload.php';
+  require 'Assets/Inventory/vendor/autoload.php';
 
    //implementar pra chamar a rota do login so spring boot
    use GuzzleHttp\Client;
@@ -23,7 +24,7 @@
   ]);
 
 
-   $url = 'http://localhost:8090/inventario/autores';
+   $url = 'http://inventarioarboreo.feis.unesp.br:8090/inventario/autores';
 
    $response = $client->request('GET', $url,[]);
 
@@ -44,7 +45,7 @@
 
 
       <td>
-        <form action="{{ url('edit-author')}}">
+        <form action="{{ url('/home/inventory/list-author/edit-author')}}" method="GET">
           <input type="hidden" name="codautor" value="<?= $detalhes->codautor;?>">
             <button title="Editar" type="submit" class="btn btn-outline-primary">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pen-fill" viewBox="0 0 16 16">
@@ -54,7 +55,7 @@
         </form>
       </td>
       <td>
-      <form action="remover-autor.php" >
+      <form action="{{ url('remove-author')}}" method="GET">
         <input type="hidden" name="codautor" value="<?= $detalhes->codautor;?>">
         <button title="Remover" type="submit" class="btn btn-outline-danger">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3-fill" viewBox="0 0 16 16">

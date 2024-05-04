@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TCC Make</title>
+    <title>Inventário Arbóreo</title>
     <link rel="stylesheet" href="{{ url('Assets/inventory/node_modules/bootstrap/dist/css/bootstrap.css') }}">
     <link rel="stylesheet" href="{{ url('Assets/inventory/css/tccmake.css') }}">
     <script src="{{ url('https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js') }}"></script>

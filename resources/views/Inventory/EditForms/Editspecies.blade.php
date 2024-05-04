@@ -12,7 +12,7 @@
   ]);
   
  
-   $url = 'http://inventarioarboreo.feis.unesp.br:8090/inventario/especies'.$codespecie;
+   $url = 'http://inventarioarboreo.feis.unesp.br:8090/inventario/especies/'.$codespecie;
   
    $response = $client->request('GET', $url,[]);
     
@@ -24,7 +24,7 @@
 <h1>Editar Espécies</h1>
 
 
-    <form action="altera-especie.php" method="GET">
+    <form action="{{ url('change-species')}}" method="GET">
     <input class="form-control" type="hidden" name="codespecie" 
                 value="<?php echo $data->codespecie;?>"/>
         <table class="table">

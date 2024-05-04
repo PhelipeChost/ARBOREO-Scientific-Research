@@ -1,6 +1,6 @@
 @include('inventory.header')
         <h1>Cadastro de Espécies</h1>
-        <form action="salvar-especie.php" method="POST">
+        <form action="{{ url('save-species')}}" method="GET">
         <table class="table">
             <tr>
                 <td><label for="nomeespecie">Espécie</label></td>

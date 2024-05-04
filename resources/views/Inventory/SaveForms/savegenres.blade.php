@@ -1,17 +1,17 @@
 <?php
-    require 'vendor/autoload.php';
+    require 'Assets/Inventory/vendor/autoload.php';
 
     
 
      //implementar pra chamar a rota do login so spring boot
      use GuzzleHttp\Client;
       
-     $genero = $_POST["nomegenero"];
+     $genero = $_GET["nomegenero"];
 
      $client = new Client();
     
    
-    $url = 'http://localhost:8090/inventario/generos';
+    $url = 'http://inventarioarboreo.feis.unesp.br:8090/inventario/generos';
    
     
      $response = $client->request('POST', $url,[
@@ -26,7 +26,7 @@
     
       
      if($response->getStatusCode() == 200){
-        header("Location: lista-genero.php");
+        return redirect()->to('list-genres')->send();
      }
       
      //$data = json_decode($response->getBody() );

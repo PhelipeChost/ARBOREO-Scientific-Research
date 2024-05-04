@@ -1,6 +1,6 @@
 @include('inventory.header')
     <h1>Cadastro de Telefones</h1>
-        <form action="salvar-telefone.php" method="POST">
+        <form action="salvar-telefone.php" method="GET">
         <table class="table">
             <tr>
                 <td><label for="telefone">Telefone</label></td>

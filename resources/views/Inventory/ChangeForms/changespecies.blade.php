@@ -4,7 +4,7 @@
     $nomeespecie = $_GET["nomeespecie"];
     $codespecie = $_GET["codespecie"];
     
-    require 'vendor/autoload.php';
+    require 'Assets/Inventory/vendor/autoload.php';
 
     //implementar pra chamar a rota do login so spring boot
     use GuzzleHttp\Client;
@@ -14,7 +14,7 @@
    ]);
    
   
-    $url = 'http://inventarioarboreo.feis.unesp.br:8090/inventario/especies'.$codespecie;
+    $url = 'http://inventarioarboreo.feis.unesp.br:8090/inventario/especies/'.$codespecie;
    
     $response = $client->request('PUT', $url,[
       'body' => json_encode([
@@ -29,7 +29,7 @@
     //echo "Status: " . $response->getStatusCode() . PHP_EOL;
      
     if($response->getStatusCode() ==  200){
-      header("Location: lista-especie.php");
+      return redirect()->to('list-species')->send();
 
     ?>
     

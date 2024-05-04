@@ -14,7 +14,7 @@
   ]);
   
  
-   $url = 'https://inventarioarboreo.feis.unesp.br:8090/inventario/generos'.$codgenero;
+   $url = 'http://inventarioarboreo.feis.unesp.br:8090/inventario/generos/'.$codgenero;
   
    $response = $client->request('GET', $url,[]);
     
@@ -26,7 +26,7 @@
 <h1>Editar Gênero</h1>
 
 
-    <form action="altera-genero.php" method="GET">
+    <form action="{{ url('change-genres')}}" method="GET">
     <input class="form-control" type="hidden" name="codgenero" 
                 value="<?php echo $data->codgenero;?>"/>
         <table class="table">

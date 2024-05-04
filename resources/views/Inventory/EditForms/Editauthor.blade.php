@@ -1,4 +1,3 @@
-
 @include('inventory.header')
 <?php       
       $codautor = $_GET["codautor"];
@@ -13,7 +12,7 @@
   ]);
   
  
-   $url = 'http://localhost:8090/inventario/autores/'.$codautor;
+   $url = 'http://inventarioarboreo.feis.unesp.br:8090/inventario/autores/'.$codautor;
   
    $response = $client->request('GET', $url,[]);
     
@@ -40,4 +39,4 @@
         
         <input  class="btn btn-outline-primary" type="submit" value="Alterar"/>
     </form>
-@include('inventory.baseboard');?>
+@include('inventory.baseboard')

@@ -1,6 +1,6 @@
 @include('inventory.header')
         <h1>Cadastro de Gêneros</h1>
-        <form action="salvar-genero.php" method="POST">
+        <form action="{{ url('save-genres')}}" method="GET">
         <table class="table">
             <tr>
                 <td><label for="nomegenero">Gênero</label></td>

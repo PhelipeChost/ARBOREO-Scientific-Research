@@ -4,10 +4,13 @@
 <table class="table table-striped">
   <thead>
     <tr>
+      <th scope="col">Espécies Cadastrados</th>
+    </tr>
+    <tr>
       <th scope="col">Código</th>
       <th scope="col">Espécie</th>
-      <th scope="col"></th>
-      <th scope="col"></th>
+      <th scope="col" style="color: rgb(61, 73, 241);">Editar</th>
+      <th scope="col" style="color: red;">Remover</th>
     </tr>
   </thead>
   <tbody class="table-group-divider">
@@ -44,7 +47,7 @@
 
 
       <td>
-        <form action="{{ url('edit-species')}}">
+        <form action="{{ url('/home/inventory/list-author/edit-species')}}" method="GET">
           <input type="hidden" name="codespecie" value="<?= $detalhes->codespecie;?>">
             <button title="Editar" type="submit" class="btn btn-outline-primary">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pen-fill" viewBox="0 0 16 16">
@@ -54,7 +57,7 @@
         </form>
       </td>
       <td>
-      <form action="{{ url('remove-species')}}" >
+      <form action="{{ url('remove-species')}}" method="GET">
         <input type="hidden" name="codespecie" value="<?= $detalhes->codespecie;?>">
         <button title="Remover" type="submit" class="btn btn-outline-danger">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3-fill" viewBox="0 0 16 16">
