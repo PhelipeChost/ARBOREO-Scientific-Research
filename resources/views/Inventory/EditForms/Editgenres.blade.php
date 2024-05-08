@@ -1,4 +1,4 @@
-@include('inventory.header')
+@include('Inventory.header')
 <?php
       $codgenero = $_GET["codgenero"];
 
@@ -41,4 +41,4 @@
         
         <input  class="btn btn-outline-primary" type="submit" value="Alterar"/>
     </form>
-    @include('inventory.baseboard')
+    @include('Inventory.baseboard')

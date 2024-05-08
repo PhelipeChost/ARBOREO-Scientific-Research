@@ -10,6 +10,6 @@ class ListspeciesController extends Controller
 {
     public function Listspecies(): \Illuminate\Contracts\View\View|\Illuminate\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\Foundation\Application
     {
-        return view('inventory.list.listspecies');
+        return view('Inventory.List.listspecies');
     }
 }

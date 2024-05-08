@@ -1,4 +1,4 @@
-@include('inventory.header')
+@include('Inventory.header')
     <form action="adiciona-produto.php" method="GET">
         <table class="table">
             <tr>
@@ -53,4 +53,4 @@
         
         <input  class="btn btn-outline-primary" type="submit" value="Cadastrar"/>
     </form>
-    @include('inventory.baseboard')
+    @include('Inventory.baseboard')

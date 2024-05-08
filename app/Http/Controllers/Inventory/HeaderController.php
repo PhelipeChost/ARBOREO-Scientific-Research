@@ -9,6 +9,6 @@ class HeaderController extends Controller
 {
     public function Header(): \Illuminate\Contracts\View\View|\Illuminate\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\Foundation\Application
     {
-        return view('inventory.header');
+        return view('Inventory.header');
     }
 }

@@ -10,6 +10,6 @@ class ListgenresController extends Controller
 {
     public function Listgenres(): \Illuminate\Contracts\View\View|\Illuminate\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\Foundation\Application
     {
-        return view('inventory.list.listgenres');
+        return view('Inventory.List.listgenres');
     }
 }

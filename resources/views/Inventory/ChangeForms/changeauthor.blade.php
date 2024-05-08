@@ -1,4 +1,4 @@
-@include('inventory.header')
+@include('Inventory.header')
 <?php
  
     $nomeautor = $_GET["nomeautor"];
@@ -41,4 +41,4 @@
   }
 
 ?>
-@include('inventory.baseboard')
+@include('Inventory.baseboard')

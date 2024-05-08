@@ -10,6 +10,6 @@ class ChangeauthorController extends Controller
 {
     public function Changeauthor(): \Illuminate\Contracts\View\View|\Illuminate\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\Foundation\Application
     {
-        return view('inventory.changeforms.changeauthor');
+        return view('Inventory.ChangeForms.changeauthor');
     }
 }

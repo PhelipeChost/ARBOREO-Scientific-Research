@@ -1,3 +1,3 @@
-@include('inventory.header')
+@include('Inventory.header')
             <h1>INVENTÁRIO ARBÓREO</h1>
-@include('inventory.baseboard') <!-- rodapé
+@include('Inventory.baseboard') <!-- rodapé

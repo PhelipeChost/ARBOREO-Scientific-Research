@@ -1,4 +1,4 @@
-@include('inventory.header')
+@include('Inventory.header')
         <h1>Cadastro de Gêneros</h1>
         <form action="{{ url('save-genres')}}" method="GET">
         <table class="table">
@@ -9,4 +9,4 @@
         </table>
            <input class="btn btn-primary" type="submit" value="Cadastrar">
         </form>
-@include('inventory.baseboard') <!-- rodapé
+@include('Inventory.baseboard') <!-- rodapé

@@ -10,6 +10,6 @@ class SavespeciesController extends Controller
 {
     public function Savespecies(): \Illuminate\Contracts\View\View|\Illuminate\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\Foundation\Application
     {
-        return view('inventory.saveforms.savespecies');
+        return view('Inventory.SaveForms.savespecies');
     }
 }

@@ -1,4 +1,4 @@
-@include('inventory.header')
+@include('Inventory.header')
             <h1>Espécies Cadastrados</h1>
 
 <table class="table table-dark table-striped">
@@ -74,4 +74,4 @@
   </tbody>
 </table>
 
-@include('inventory.baseboard')
+@include('Inventory.baseboard')

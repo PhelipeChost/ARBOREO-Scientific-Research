@@ -11,6 +11,6 @@
     <link rel="stylesheet" href="{{ url('Assets/inventory/node_modules/sweetalert2/sweetalert2.min.css') }}">
 </head>
 <body>
-    @include('inventory.menu')
+    @include('Inventory.menu')
     <div class="container">
         <div class="principal">

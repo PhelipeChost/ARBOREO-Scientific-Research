@@ -10,6 +10,6 @@ class RemovegenresController extends Controller
 {
     public function Removegenres(): \Illuminate\Contracts\View\View|\Illuminate\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\Foundation\Application
     {
-        return view('inventory.deleteforms.removegenres');
+        return view('Inventory.DeleteForms.removegenres');
     }
 }

@@ -10,6 +10,6 @@ class SpeciesController extends Controller
 {
     public function Species(): \Illuminate\Contracts\View\View|\Illuminate\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\Foundation\Application
     {
-        return view('inventory.registrations.species');
+        return view('Inventory.Registrations.species');
     }
 }

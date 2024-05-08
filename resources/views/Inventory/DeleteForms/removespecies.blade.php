@@ -1,4 +1,4 @@
-@include('inventory.header')
+@include('Inventory.header')
 <?php
     $codigo = $_GET["codespecie"];
     
@@ -26,4 +26,4 @@
   }
 
 ?>
-@include('inventory.baseboard')
+@include('Inventory.baseboard')

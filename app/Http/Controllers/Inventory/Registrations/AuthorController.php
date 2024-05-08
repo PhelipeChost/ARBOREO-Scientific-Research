@@ -10,6 +10,6 @@ class AuthorController extends Controller
 {
     public function Author(): \Illuminate\Contracts\View\View|\Illuminate\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\Foundation\Application
     {
-        return view('inventory.registrations.author');
+        return view('Inventory.Registrations.author');
     }
 }

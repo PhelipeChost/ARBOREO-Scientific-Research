@@ -10,6 +10,6 @@ class ListauthorController extends Controller
 {
     public function Listauthor(): \Illuminate\Contracts\View\View|\Illuminate\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\Foundation\Application
     {
-        return view('inventory.list.listauthor');
+        return view('Inventory.list.listauthor');
     }
 }

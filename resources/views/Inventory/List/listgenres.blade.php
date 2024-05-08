@@ -1,4 +1,4 @@
-@include('inventory.header')
+@include('Inventory.header')
 <table class="table table-dark table-striped">
   <thead>
     <tr>
@@ -71,4 +71,4 @@
     
   </tbody>
 </table>
-@include('inventory.baseboard')
+@include('Inventory.baseboard')

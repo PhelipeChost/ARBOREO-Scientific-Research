@@ -54,7 +54,7 @@
     </form>
     <div class="form-container__line-divider"></div>
     <div class="form-container__links">
-        <a href="{{url('register')}}" class="form-container__link">Cadastrar</a>
+        <a href="{{url('start-registration')}}" class="form-container__link">Cadastrar</a>
         <a href="{{ url('forgot-password') }}" class="form-container__link">Forgot Your Password?</a>
     </div>
 </div>

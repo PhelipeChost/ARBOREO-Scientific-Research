@@ -10,6 +10,6 @@ class GenresController extends Controller
 {
     public function Genres(): \Illuminate\Contracts\View\View|\Illuminate\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\Foundation\Application
     {
-        return view('inventory.registrations.genres');
+        return view('Inventory.Registrations.genres');
     }
 }

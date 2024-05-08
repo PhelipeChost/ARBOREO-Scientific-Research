@@ -10,6 +10,6 @@ class RemoveproductsController extends Controller
 {
     public function Removeproducts(): \Illuminate\Contracts\View\View|\Illuminate\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\Foundation\Application
     {
-        return view('inventory.deleforms.removeproducts');
+        return view('Inventory.DeleteForms.removeproducts');
     }
 }

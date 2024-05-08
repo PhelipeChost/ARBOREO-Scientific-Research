@@ -10,6 +10,6 @@ class ChangeproductsController extends Controller
 {
     public function Changeproducts(): \Illuminate\Contracts\View\View|\Illuminate\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\Foundation\Application
     {
-        return view('inventory.changeforms.changeproducts');
+        return view('Inventory.ChangeForms.changeproducts');
     }
 }

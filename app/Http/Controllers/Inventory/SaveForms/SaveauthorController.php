@@ -10,6 +10,6 @@ class SaveauthorController extends Controller
 {
     public function Saveauthor(): \Illuminate\Contracts\View\View|\Illuminate\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\Foundation\Application
     {
-        return view('inventory.saveforms.saveauthor');
+        return view('Inventory.SaveForms.saveauthor');
     }
 }
