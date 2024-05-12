@@ -40,7 +40,7 @@ Route::get('/menu', [App\Http\Controllers\Inventory\MenuController::class, 'menu
 
 
     // List (Listar)
-    Route::get('/home/inventory/list-author', [App\Http\Controllers\Inventory\ListForms\ListauthorController::class, 'listauthor'])->name('inventory.list.listauthor');
+    Route::get('/home/inventory/list-author', [App\Http\Controllers\Inventory\ListForms\ListauthorController::class, 'listauthor'])->name('inventory.ListForms.listauthor');
     Route::get('/home/inventory/list-genres', [App\Http\Controllers\Inventory\ListForms\ListgenresController::class, 'listgenres'])->name('inventory.list.listgenres');
     Route::get('/home/inventory/list-phones', [App\Http\Controllers\Inventory\ListForms\ListphonesController::class, 'listphones'])->name('inventory.list.listphones');
     Route::get('/home/inventory/list-products', [App\Http\Controllers\Inventory\ListForms\ListproductsController::class, 'listproducts'])->name('inventory.list.listproducts');
