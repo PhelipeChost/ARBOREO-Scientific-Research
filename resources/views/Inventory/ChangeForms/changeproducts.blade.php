@@ -1,4 +1,4 @@
-@include('Inventory.header')
+@include('inventory.header')
 <?php
 
     include("conecta.php");
@@ -25,4 +25,4 @@
 
     mysqli_close($conn);
 ?>
-@include('Inventory.baseboard')
+@include('inventory.baseboard')
