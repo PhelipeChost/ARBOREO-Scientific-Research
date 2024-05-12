@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Http\Controllers\Inventory\List;
+namespace App\Http\Controllers\Inventory\ListForms;
 
-use App\Http\Controllers\Inventory\List;
+use App\Http\Controllers\Inventory\ListForms;
 use Illuminate\Routing\Controller;
 Use GuzzleHttp\Client;
 
@@ -29,7 +29,7 @@ class ListauthorController extends Controller
             $data = json_decode($response->getBody());
 
             // Retorna a view com os dados
-            return view('Inventory.List.listauthor', compact('data'));
+            return view('Inventory.ListForms.listauthor', compact('data'));
 
         } catch (\Exception $e) {
             // Tratamento de erros

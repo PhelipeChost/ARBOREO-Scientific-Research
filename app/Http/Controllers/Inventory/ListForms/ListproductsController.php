@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Http\Controllers\Inventory\List;
+namespace App\Http\Controllers\Inventory\ListForms;
 
-use App\Http\Controllers\Inventory;
+use App\Http\Controllers\Inventory\ListForms;
 use Illuminate\Routing\Controller;
 
 //Listar-telefones

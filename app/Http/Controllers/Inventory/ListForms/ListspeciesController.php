@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Inventory\List;
+namespace App\Http\Controllers\Inventory\ListForms;
 
 use App\Http\Controllers\Inventory\List;
 use Illuminate\Routing\Controller;

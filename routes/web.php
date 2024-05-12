@@ -40,11 +40,11 @@ Route::get('/menu', [App\Http\Controllers\Inventory\MenuController::class, 'menu
 
 
     // List (Listar)
-    Route::get('/home/inventory/list-author', [App\Http\Controllers\Inventory\List\ListauthorController::class, 'listauthor'])->name('inventory.list.listauthor');
-    Route::get('/home/inventory/list-genres', [App\Http\Controllers\Inventory\List\ListgenresController::class, 'listgenres'])->name('inventory.list.listgenres');
-    Route::get('/home/inventory/list-phones', [App\Http\Controllers\Inventory\List\ListphonesController::class, 'listphones'])->name('inventory.list.listphones');
-    Route::get('/home/inventory/list-products', [App\Http\Controllers\Inventory\List\ListproductsController::class, 'listproducts'])->name('inventory.list.listproducts');
-    Route::get('/home/inventory/list-species', [App\Http\Controllers\Inventory\List\ListspeciesController::class, 'listspecies'])->name('inventory.list.listspecies');
+    Route::get('/home/inventory/list-author', [App\Http\Controllers\Inventory\ListForms\ListauthorController::class, 'listauthor'])->name('inventory.list.listauthor');
+    Route::get('/home/inventory/list-genres', [App\Http\Controllers\Inventory\ListForms\ListgenresController::class, 'listgenres'])->name('inventory.list.listgenres');
+    Route::get('/home/inventory/list-phones', [App\Http\Controllers\Inventory\ListForms\ListphonesController::class, 'listphones'])->name('inventory.list.listphones');
+    Route::get('/home/inventory/list-products', [App\Http\Controllers\Inventory\ListForms\ListproductsController::class, 'listproducts'])->name('inventory.list.listproducts');
+    Route::get('/home/inventory/list-species', [App\Http\Controllers\Inventory\ListForms\ListspeciesController::class, 'listspecies'])->name('inventory.list.listspecies');
 
 
 
