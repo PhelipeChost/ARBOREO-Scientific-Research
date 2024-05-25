@@ -31,6 +31,7 @@
               <!-- <li><a class="dropdown-item" href="{{ url('/home/inventory/telephones') }}">Telefones</a></li> -->
               <!-- <li><a class="dropdown-item" href="{{ url('/home/inventory/products') }}">Produtos</a></li> -->
               <li><a class="dropdown-item" href="{{ url('/home/inventory/species') }}">Espécies</a></li>
+              <li><a class="dropdown-item" href="{{ url('/home/inventory/epithet') }}">Epíteto</a></li>
             </ul>
           </li>
           <li class="nav-item dropdown">
@@ -43,7 +44,7 @@
               <!-- <li><a class="dropdown-item" href="{{ url('/home/inventory/list-phones') }}">Telefones</a></li> -->
               <!-- <li><a class="dropdown-item" href="{{ url('/home/inventory/list-products') }}">Produtos</a></li> -->
               <li><a class="dropdown-item" href="{{ url('/home/inventory/list-species') }}">Espécies</a></li>
-              
+                <li><a class="dropdown-item" href="{{ url('/home/inventory/list-epithet') }}">Epíteto</a></li>
             </ul>
           </li>
         </ul>
