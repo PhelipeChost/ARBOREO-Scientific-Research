@@ -32,6 +32,7 @@
               <!-- <li><a class="dropdown-item" href="{{ url('/home/inventory/products') }}">Produtos</a></li> -->
               <li><a class="dropdown-item" href="{{ url('/home/inventory/species') }}">Espécies</a></li>
               <li><a class="dropdown-item" href="{{ url('/home/inventory/epithet') }}">Epíteto</a></li>
+              <li><a class="dropdown-item" href="{{ url('/home/inventory/families') }}">Famílias</a></li>
             </ul>
           </li>
           <li class="nav-item dropdown">
@@ -44,7 +45,11 @@
               <!-- <li><a class="dropdown-item" href="{{ url('/home/inventory/list-phones') }}">Telefones</a></li> -->
               <!-- <li><a class="dropdown-item" href="{{ url('/home/inventory/list-products') }}">Produtos</a></li> -->
               <li><a class="dropdown-item" href="{{ url('/home/inventory/list-species') }}">Espécies</a></li>
-                <li><a class="dropdown-item" href="{{ url('/home/inventory/list-epithet') }}">Epíteto</a></li>
+              <li><a class="dropdown-item" href="{{ url('/home/inventory/list-epithet') }}">Epíteto</a></li>
+              <li><a class="dropdown-item" href="{{ url('/home/inventory/list-families') }}">Famílias</a></li> -
+              <li><a class="dropdown-item" href="">Locais</a></li>
+              <li><a class="dropdown-item" href="">Nativa / Exótica</a></li> -
+              <li><a class="dropdown-item" href="">Tipo Usuários</a></li>
             </ul>
           </li>
         </ul>

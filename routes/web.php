@@ -38,6 +38,7 @@ Route::get('/menu', [App\Http\Controllers\Inventory\MenuController::class, 'menu
     Route::get('/home/inventory/products', [App\Http\Controllers\Inventory\Registrations\ProductsController::class, 'products'])->name('inventory.registrations.products');
     Route::get('/home/inventory/species', [App\Http\Controllers\Inventory\Registrations\SpeciesController::class, 'species'])->name('inventory.registrations.species');
     Route::get('/home/inventory/epithet', [App\Http\Controllers\Inventory\Registrations\EpithetController::class, 'epithet'])->name('inventory.registrations.epithet');
+    Route::get('/home/inventory/families', [App\Http\Controllers\Inventory\Registrations\FamiliesController::class, 'families'])->name('inventory.registrations.families');
 
     // List (Listar)
     Route::get('/home/inventory/list-author', [App\Http\Controllers\Inventory\ListForms\ListauthorController::class, 'listauthor'])->name('inventory.ListForms.listauthor');
@@ -46,6 +47,7 @@ Route::get('/menu', [App\Http\Controllers\Inventory\MenuController::class, 'menu
     Route::get('/home/inventory/list-products', [App\Http\Controllers\Inventory\ListForms\ListproductsController::class, 'listproducts'])->name('inventory.list.listproducts');
     Route::get('/home/inventory/list-species', [App\Http\Controllers\Inventory\ListForms\ListspeciesController::class, 'listspecies'])->name('inventory.list.listspecies');
     Route::get('/home/inventory/list-epithet', [App\Http\Controllers\Inventory\ListForms\ListepithetController::class, 'listepithet'])->name('inventory.list.listepithet');
+    Route::get('/home/inventory/list-families', [App\Http\Controllers\Inventory\ListForms\ListfamiliesController::class, 'listfamilies'])->name('inventory.list.listfamilies');
 
 
 
@@ -56,6 +58,7 @@ Route::get('/menu', [App\Http\Controllers\Inventory\MenuController::class, 'menu
     Route::get('/home/inventory/list-products/edit-products', [App\Http\Controllers\Inventory\EditForms\EditproductsController::class, 'editproducts'])->name('inventory.editforms.editproducts');
     Route::get('/home/inventory/list-species/edit-species', [App\Http\Controllers\Inventory\EditForms\EditspeciesController::class, 'editspecies'])->name('inventory.editforms.editspecies');
     Route::get('/home/inventory/list-epithet/edit-epithet', [App\Http\Controllers\Inventory\EditForms\EditepithetController::class, 'editepithet'])->name('inventory.editforms.editepithet');
+    Route::get('/home/inventory/list-families/edit-families', [App\Http\Controllers\Inventory\EditForms\EditfamiliesController::class, 'editfamilies'])->name('inventory.editforms.editfamilies');
 
     // ChangeForms (processo de edição de formulário que altera os registros Formulários)
     Route::get('/change-author', [App\Http\Controllers\Inventory\ChangeForms\ChangeAuthorController::class, 'changeauthor'])->name('inventory.changeforms.changeauthor');
@@ -64,6 +67,7 @@ Route::get('/menu', [App\Http\Controllers\Inventory\MenuController::class, 'menu
     Route::get('/change-products', [App\Http\Controllers\Inventory\ChangeForms\ChangeproductsController::class, 'changeproducts'])->name('inventory.changeforms.changeproducts');
     Route::get('/change-species', [App\Http\Controllers\Inventory\ChangeForms\ChangespeciesController::class, 'changespecies'])->name('inventory.changeforms.changespecies');
     Route::get('/change-epithet', [App\Http\Controllers\Inventory\ChangeForms\ChangeepithetController::class, 'changeepithet'])->name('inventory.changeforms.changeepithet');
+    Route::get('/change-families', [App\Http\Controllers\Inventory\ChangeForms\ChangefamiliesController::class, 'changefamilies'])->name('inventory.changeforms.changefamilies');
 
 
     // SaveForms (processo de salvamento de cadastros)
@@ -73,6 +77,7 @@ Route::get('/menu', [App\Http\Controllers\Inventory\MenuController::class, 'menu
     Route::get('/save-products', [App\Http\Controllers\Inventory\SaveForms\SaveproductsController::class, 'saveproducts'])->name('inventory.saveforms.saveproducts');
     Route::get('/save-species', [App\Http\Controllers\Inventory\SaveForms\SavespeciesController::class, 'savespecies'])->name('inventory.saveforms.savespecies');
     Route::get('/save-epithet', [App\Http\Controllers\Inventory\SaveForms\SaveepithetController::class, 'saveepithet'])->name('inventory.saveforms.saveepithet');
+    Route::get('/save-families', [App\Http\Controllers\Inventory\SaveForms\SavefamiliesController::class, 'savefamilies'])->name('inventory.saveforms.savefamilies');
 
     // DeleteForms (processo de exclusão de registros)
     Route::get('/remove-author', [App\Http\Controllers\Inventory\DeleteForms\RemoveAuthorController::class, 'removeauthor'])->name('inventory.deleteforms.removeauthor');
@@ -81,6 +86,7 @@ Route::get('/menu', [App\Http\Controllers\Inventory\MenuController::class, 'menu
     Route::get('/remove-products', [App\Http\Controllers\Inventory\DeleteForms\RemoveproductsController::class, 'removeproducts'])->name('inventory.deleteforms.removeproducts');
     Route::get('/remove-species', [App\Http\Controllers\Inventory\DeleteForms\RemovespeciesController::class, 'removespecies'])->name('inventory.deleteforms.removespecies');
     Route::get('/remove-epithet', [App\Http\Controllers\Inventory\DeleteForms\RemoveepithetController::class, 'removeepithet'])->name('inventory.deleteforms.removeepithet');
+    Route::get('/remove-families', [App\Http\Controllers\Inventory\DeleteForms\RemovefamiliesController::class, 'removefamilies'])->name('inventory.deleteforms.removefamilies');
 
 Route::get('/map', [App\Http\Controllers\MapController::class, 'map']);
 

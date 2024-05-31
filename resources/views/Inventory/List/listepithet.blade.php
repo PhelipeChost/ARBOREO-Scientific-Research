@@ -1,7 +1,7 @@
 @include('inventory.header')
 <h1>Epítetos Cadastrados</h1>
 
-<table class="table table-striped">
+<table class="table table-dark table-striped">
     <thead>
     <tr>
         <th scope="col">Código</th>

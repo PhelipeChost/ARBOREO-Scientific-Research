@@ -1,7 +1,7 @@
 @include('inventory.header')
 <?php
 
-    $codigo = $_GET["codepiteto"];
+    $codigo = $_GET["codfamilia"];
 
     require 'Assets/Inventory/vendor/autoload.php';
 
@@ -13,14 +13,14 @@
   ]);
 
 
-   $url = 'http://localhost:8090/inventario/epitetos/'.$codigo;
+   $url = 'http://localhost:8090/inventario/familias/'.$codigo;
 
    $response = $client->request('DELETE', $url,[]);
 
    //echo "Status: " . $response->getStatusCode() . PHP_EOL;
 
     if($response->getStatusCode()==200){
-        return redirect()->to('home/inventory/list-epithet')->send();
+        return redirect()->to('home/inventory/list-families')->send();
 
     } else {
         echo $nome . ',não removido!';
