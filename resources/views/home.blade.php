@@ -415,10 +415,10 @@
 
         <div class="row">
             <div class="col-full">
-                <h1 class="intro-header"  data-aos="fade-up">Download Our App Today!</h1>
+                <h1 class="intro-header"  data-aos="fade-up">Download do Nosso App!</h1>
 
                 <p class="lead" data-aos="fade-up">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                    Tenha a experiência da nossa plataforma web no seu dia a dia! Sem internet, poderá navegar pela nossa Unesp
                 </p>
 
                 <ul class="download-badges">
@@ -438,114 +438,69 @@
 
         <div class="footer-main">
             <div class="row">
-
-                <div class="col-three md-1-3 tab-full footer-info">
-
-                    <div class="footer-logo"></div>
-
-                    <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in ipsum id orci porta dapibus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.
-                    </p>
-
-                    <ul class="footer-social-list">
-                        <li>
-                            <a href="#"><i class="fa fa-facebook-square"></i></a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-behance"></i></a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-dribbble"></i></a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                        </li>
-                    </ul>
-
-
-                </div> <!-- end footer-info -->
-
+    
                 <div class="col-three md-1-3 tab-1-2 mob-full footer-contact">
-
-                    <h4>Contact</h4>
-
+    
+                    <h4>Endereço</h4>
+    
                     <p>
-                    1600 Amphitheatre Parkway<br>
-                    Mountain View, CA <br>
-                    94043 US<br>
+                        Rua Monção, 226 - Zona Norte<br>
+                        Ilha Solteira - SP<br>
+                        CEP 15385-00<br>
                     </p>
-
+    
                     <p>
-                    someone@dazzlesite.com <br>
-                    Phone: (+63) 555 1212 <br>
-                    Fax: (+63) 555 0100
+                        Email: andreia.rezende@unesp.br<br>
+                        Telefone: (18) 3743-1269<br>
                     </p>
-
+    
                 </div> <!-- end footer-contact -->
-
-                <div class="col-two md-1-3 tab-1-2 mob-full footer-site-links">
-
-                    <h4>Site Links</h4>
-
-                    <ul class="list-links">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Terms</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                    </ul>
-
-                </div> <!-- end footer-site-links -->
-
+    
                 <div class="col-four md-1-2 tab-full footer-subscribe">
-
-                    <h4>Our Newsletter</h4>
-
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-
+    
+                    <h4>Contato</h4>
+    
+                    <p>Adicione aqui a sua mensagem!</p>
+    
                     <div class="subscribe-form">
-
+    
                         <form id="mc-form" class="group" novalidate="novalidate">
-
-                            <input type="email" value="" name="EMAIL" class="email" id="mc-email" placeholder="Email Address" required="">
-
+    
+                            <input type="email" value="" name="EMAIL" class="email" id="mc-email" placeholder="Mensagem" required="">
+    
                             <input type="submit" name="subscribe" value="Send">
-
+    
                             <label for="mc-email" class="subscribe-message"></label>
-
+    
                         </form>
-
+    
                     </div>
-
+    
                 </div> <!-- end footer-subscribe -->
-
+    
             </div> <!-- /row -->
         </div> <!-- end footer-main -->
-
-
-      <div class="footer-bottom">
-
-      	<div class="row">
-
-      		<div class="col-twelve">
-	      		<div class="copyright">
-		         	<span>© Copyright Dazzle 2017.</span>
-		         	<span>Design by <a href="{{ url('https://www.styleshout.com/') }}">styleshout</a></span>
-		         </div>
-
-		         <div id="go-top">
-		            <a class="smooth scroll" title="Back to Top" href="#top"><i class="icon-arrow-up"></i></a>
-		         </div>
-	      	</div>
-
-      	</div> <!-- end footer-bottom -->
-
-      </div>
-
+    
+    
+        <div class="footer-bottom">
+    
+            <div class="row">
+    
+                <div class="col-twelve">
+                    <div class="copyright">
+                        <span>© Copyright ThunderWeb 2020.</span>
+                        <span>development by <a href="{{ url('https://www.linkedin.com/in/felipe-costa-20a12b262/') }}">Felipe Costa</a></span>
+                    </div>
+    
+                    <div id="go-top">
+                        <a class="smooth scroll" title="Back to Top" href="#top"><i class="icon-arrow-up"></i></a>
+                    </div>
+                </div>
+    
+            </div> <!-- end footer-bottom -->
+    
+        </div>
+    
     </footer>
 
     <div id="preloader">
