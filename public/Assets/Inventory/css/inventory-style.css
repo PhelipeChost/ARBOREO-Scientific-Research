@@ -1,0 +1,331 @@
+/* MENU */
+
+#container-title {
+    text-align: center;
+    margin-top: 100px; 
+    margin-bottom: 30px; 
+}
+
+
+
+.sub-title {
+    font-size: 40px;
+    color: white; 
+    font-family: sans-serif;
+
+}
+
+
+
+li {
+
+    list-style: none;
+
+    display: inline-block;
+
+    font-weight: 700;
+
+    padding: 5px 15px;
+
+}
+
+.false-link {
+    text-decoration: none;
+
+    color: red;
+
+    opacity: 30%;
+
+    padding: 7px;
+
+    transition: all 0.5s;
+
+    font-size: 17px;
+}
+
+.false-link:hover {
+    text-decoration: none;
+    color: red;
+}
+
+a {
+
+    text-decoration: none;
+
+    color: white;
+
+    padding: 7px;
+
+    transition: all 0.5s;
+
+    font-size: 17px;
+
+}
+
+.alert-warning {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.vr {
+    color: black;
+}
+
+@media (max-width: 990px) {
+    .vr {
+        color: white;
+    }
+}
+
+.link {
+
+    color: white;
+
+    text-decoration: none;
+
+    padding: 10px 20px;
+
+    transition: all 0.5s;
+
+    font-size: 25px;
+
+    font-weight: 500;
+
+}
+
+
+
+.link:hover {
+
+    text-decoration: none;
+
+    color: white;
+
+    box-shadow: 0px 1px 0px white;
+
+}
+
+/* FIM MENU */
+
+@media (max-width: 768px) {
+    .sub-title-img {
+        width: 200px;
+    }
+}
+
+/* Exposição */
+
+main {
+    background-color: black;
+    padding: 20px;
+}
+
+.logo-titulo {
+    border-radius: 50%;
+    margin-top: 50px;
+
+}
+
+.logo-titulo:hover {
+    filter: contrast(0.8);
+
+}
+
+.apresentacao {
+    max-width: 1000px;
+
+}
+
+.titulo {
+    font-family: sans-serif;
+    font-weight: 800;
+    font-size: 30px;
+    text-align: left;
+    margin-top: 50px;
+}
+
+@media (max-width: 600px) { 
+    .titulo {
+        font-size: 20px;
+    }
+}
+
+.col-md {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px 10px;
+    font-size: 19px;
+    font-weight: 600;
+    text-align: justify;
+
+}
+
+.bd-callout {
+    max-width: 50rem;
+    padding: 1.25rem;
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+    border: 1px solid #212529;
+    border-left-width: 0.25rem;
+    border-radius: 0.25rem;
+}
+
+.bd-callout-info {
+    border-left-color: #5bc0de;
+}
+
+.display-pixel {
+    max-width: 90%;
+    margin-left: 100px;
+    margin-top: -100px;
+}
+
+.nome-autor {
+        font-weight: 700;
+
+    }
+
+@media (max-width: 600px) { 
+.display-pixel {
+    margin-left: auto;
+    margin-top: 30px;
+
+} 
+
+.nome-autor {
+    font-size: 23px;
+    margin-top: -100px;
+    margin-bottom: 50px;
+    margin-left: 40%;
+}
+
+.col-md {
+    text-align: justify;
+    font-size: 15px;
+}
+}
+
+
+/* FIM Exposição */
+
+
+/* Social */
+
+
+
+.container-social {
+margin-top: 100px;
+margin-bottom: 260px;
+}
+
+
+.copyright {
+
+font-family: sans-serif;
+text-align: center;
+color: white;
+font-size: 20px;
+padding: 0px 0px;
+}
+
+@media (max-width: 576px ) {
+.copyright {
+    font-size: 15px;
+}
+
+#copyright {
+    margin-bottom: 20px;
+}
+
+}
+
+.social {
+
+margin-left: auto;
+
+margin-right: auto;
+
+text-align: center;
+
+margin-bottom: 10px;
+
+}
+
+.img-social {
+width: 60px;
+border-radius: 100px;
+}
+
+@media (max-width: 576px) {
+.img-social {
+    width: 40px;
+
+}
+} 
+
+/* FIM SOCIAL */
+
+#quemsomos {
+    box-shadow: 0px 100px 0px white;
+    background-color: #212529;
+    color: white;
+}
+
+#loja {
+    background-color: white;
+}
+
+/* Compras */
+
+.container-display {
+padding: 30px; 
+margin-left: auto; 
+margin-right: auto; 
+max-width: 80rem;
+
+}
+
+.container-comprar {
+margin-top: 90px;
+margin-bottom: 90px;
+width: 25rem; 
+height: 30rem; 
+margin-left: auto; 
+margin-right: auto;
+transition: 0.5s;
+font-family: sans-serif;
+}
+
+
+.card {
+padding: 20px;
+transition: 0.2s;
+}
+
+.card:hover {
+box-shadow: 0px 0px 1px black;
+}
+
+
+.img-livro {
+width: 10rem; 
+padding: 10px; 
+margin-left: auto; 
+margin-right: auto;
+
+}
+
+#card-text {
+font-weight: 700; 
+color: red;
+}
+
+.comprar {
+width: 200px;
+}
+
+.comprar:hover {
+box-shadow: 0px 0px 0px 1px black;
+}
+
+/* FIM Compras */
