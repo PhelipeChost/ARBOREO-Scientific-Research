@@ -33,7 +33,9 @@
               <li><a class="dropdown-item" href="{{ url('/home/inventory/species') }}">Espécies</a></li>
               <li><a class="dropdown-item" href="{{ url('/home/inventory/epithet') }}">Epíteto</a></li>
               <li><a class="dropdown-item" href="{{ url('/home/inventory/families') }}">Famílias</a></li>
+              <li><a class="dropdown-item" href="{{ url('/home/inventory/plant')}}">Plantas</a></li>
               <li><a class="dropdown-item" href="{{ url('/home/inventory/exoticnative')}}">Nativa / Exótica</a></li>
+
 
             </ul>
           </li>
