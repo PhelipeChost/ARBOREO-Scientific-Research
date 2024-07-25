@@ -28,8 +28,6 @@
             <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="{{ url('/home/inventory/authors') }}">Autores</a></li>
               <li><a class="dropdown-item" href="{{ url('/home/inventory/genres') }}">Gêneros</a></li>
-              <!-- <li><a class="dropdown-item" href="{{ url('/home/inventory/telephones') }}">Telefones</a></li> -->
-              <!-- <li><a class="dropdown-item" href="{{ url('/home/inventory/products') }}">Produtos</a></li> -->
               <li><a class="dropdown-item" href="{{ url('/home/inventory/species') }}">Espécies</a></li>
               <li><a class="dropdown-item" href="{{ url('/home/inventory/epithet') }}">Epíteto</a></li>
               <li><a class="dropdown-item" href="{{ url('/home/inventory/families') }}">Famílias</a></li>
@@ -46,8 +44,6 @@
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="{{ url('/home/inventory/list-author') }}">Autores</a></li>
               <li><a class="dropdown-item" href="{{ url('/home/inventory/list-genres') }}">Gêneros</a></li>
-              <!-- <li><a class="dropdown-item" href="{{ url('/home/inventory/list-phones') }}">Telefones</a></li> -->
-              <!-- <li><a class="dropdown-item" href="{{ url('/home/inventory/list-products') }}">Produtos</a></li> -->
               <li><a class="dropdown-item" href="{{ url('/home/inventory/list-species') }}">Espécies</a></li>
               <li><a class="dropdown-item" href="{{ url('/home/inventory/list-epithet') }}">Epíteto</a></li>
               <li><a class="dropdown-item" href="{{ url('/home/inventory/list-families') }}">Famílias</a></li>

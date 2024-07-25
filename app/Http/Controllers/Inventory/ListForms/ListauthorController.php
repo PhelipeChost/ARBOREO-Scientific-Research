@@ -24,7 +24,6 @@ class ListauthorController extends Controller
             // Faz a solicitação GET para a API
             $client = new Client();
             $response = $client->get('http://inventarioarboreo.feis.unesp.br:8090/inventario/autores');
-            $data = json_decode($response->getBody(), true);
 
             // Decodifica a resposta JSON
             $data = json_decode($response->getBody());

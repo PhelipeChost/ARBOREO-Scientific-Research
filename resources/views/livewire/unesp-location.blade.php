@@ -11,30 +11,29 @@
         #map { position: absolute; top: 0; bottom: 0; width: 100%;}
 
         @media (max-width: 700px) {
-            #map { position: absolute; top: 0; bottom: 0; width: 700px; height: 1080px;}
+            #map { top: 0; bottom: 0; width: 700px; height: 1080px;}
         }
-    </style>
-</head>
-<body>
-<style>
-    .mapboxgl-popup {
+
+        .mapboxgl-popup {
         max-width: 400px;
         font:
             12px/20px 'Helvetica Neue',
             Arial,
             Helvetica,
             sans-serif;
-    }
-</style>
+        }
+    </style>
+</head>
+<body>
 <div id="map"></div>
 <script>
     mapboxgl.accessToken = 'pk.eyJ1IjoibW9uaWtybyIsImEiOiJjbHYwMXM0MncxZnF1MmtvNXU4c252bDltIn0.nOOBwlBljykLvVNd-DT36w';
     const map = new mapboxgl.Map({
         container: 'map',
         // Choose from Mapbox's core styles, or make your own style with Mapbox Studio
-        style: 'mapbox://styles/monikro/clv4qrn7802fv01nufggbcs2l',
-        center: [-51.343479, -20.427473],
-        zoom: 15
+        style: 'mapbox://styles/monikro/clyzuo21501l001p93cat782b',
+        center: [-51.3410, -20.4183],
+        zoom: 17
     });
 
     map.on('load', function() {
