@@ -21,7 +21,12 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 Route::get('/', [App\Http\Controllers\IndexController::class, 'index']);
-Route::get('/authenticate', [App\Http\Controllers\AuthenticateController::class, 'Authenticate']);
+
+Route::get('/authenticate', [App\Http\Controllers\AuthenticateController::class, 'Authenticate'])->name('authenticate');
+Route::post('/authenticate-user', [App\Http\Controllers\AuthenticateController::class, 'authenticateUser'])->name('authenticate.user');
+Route::post('/end-session', [App\Http\Controllers\AuthenticateController::class, 'endSession'])->name('end.session');
+Route::post('/check-account-status', [App\Http\Controllers\AuthenticateController::class, 'checkAccountStatus'])->name('check.account.status');
+
 Route::get('/start-registration', [App\Http\Controllers\RegisteredController::class, 'Registered']);
 Route::get('/forgot-password', [App\Http\Controllers\PassForgotController::class, 'PassForgot']);
 

@@ -56,7 +56,7 @@
                 <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('frm-logout').submit();" style="text-decoration: none; color: white;">
                     Logout
                 </a>
-                <form id="frm-logout" action="{{ __('logout') }}" method="POST" style="display: none;">
+                <form id="frm-logout" action="{{ __('end-session') }}" method="POST" style="display: none;">
                     {{ csrf_field() }}
                 </form>
             </div>
