@@ -14,7 +14,7 @@
    ]);
 
 
-    $url = 'http://localhost:8090/inventario/familias/'.$codfamilia;
+    $url = 'http://inventarioarboreo.feis.unesp.br:8090/inventario/familias/'.$codfamilia;
 
     $response = $client->request('PUT', $url,[
       'body' => json_encode([

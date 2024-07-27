@@ -39,6 +39,10 @@
 						<h2>CADASTROS</h2>
 						<div class="row">
 							<article class="col-6 col-12-xsmall work-item">
+								<a href="{{ url('Assets/Inventory/Template/images/thumbs/plant.jpg') }}" class="image fit thumb"><img src="{{ url('Assets/Inventory/Template/images/thumbs/plant.jpg') }}" alt="" /></a>
+								<a href="{{ url('/home/inventory/plant') }}">Plantas</a>
+							</article>
+							<article class="col-6 col-12-xsmall work-item">
 								<a href="{{ url('Assets/Inventory/Template/images/thumbs/autores.jpg') }}" class="image fit thumb"><img src="{{ url('Assets/Inventory/Template/images/thumbs/autores.jpg') }}" alt="" /></a>
 								<a href="{{ url('/home/inventory/authors') }}">Autores</a>
 							</article>
@@ -69,27 +73,27 @@
 						<div class="row">
 							<article class="col-6 col-12-xsmall work-item">
 								<a href="{{ url('Assets/Inventory/Template/images/thumbs/autores.jpg') }}" class="image fit thumb"><img src="{{ url('Assets/Inventory/Template/images/thumbs/autores.jpg') }}" alt="" /></a>
-								<a href="{{ url('/home/inventory/authors') }}">Autores</a>
+								<a href="{{ url('/home/inventory/list-author') }}">Autores</a>
 							</article>
 							<article class="col-6 col-12-xsmall work-item">
 								<a href="{{ url('Assets/Inventory/Template/images/fulls/generos.jpg') }}" class="image fit thumb"><img src="{{ url('Assets/Inventory/Template/images/thumbs/generos.jpg') }}" alt="" /></a>
-								<h3><a href="{{ url('/home/inventory/genres') }}">Gêneros</a></h3>
+								<h3><a href="{{ url('/home/inventory/list-genres') }}">Gêneros</a></h3>
 							</article>
 							<article class="col-6 col-12-xsmall work-item">
 								<a href="{{ url('Assets/Inventory/Template/images/fulls/espécies.jpg') }}" class="image fit thumb"><img src="{{ url('Assets/Inventory/Template/images/thumbs/espécies.jpg') }}" alt="" /></a>
-								<h3><a href="{{ url('/home/inventory/species') }}">Espécies</a></h3>
+								<h3><a href="{{ url('/home/inventory/list-species') }}">Espécies</a></h3>
 							</article>
 							<article class="col-6 col-12-xsmall work-item">
 								<a href="{{ url('Assets/Inventory/Template/images/fulls/epítetos.jpg') }}" class="image fit thumb"><img src="{{ url('Assets/Inventory/Template/images/thumbs/epítetos.jpg') }}" alt="" /></a>
-								<h3><a href="{{ url('/home/inventory/epithet') }}">Epíteto</a></h3>
+								<h3><a href="{{ url('/home/inventory/list-epithet') }}">Epíteto</a></h3>
 							</article>
 							<article class="col-6 col-12-xsmall work-item">
 								<a href="{{ url('Assets/Inventory/Template/images/fulls/familias.jpg') }}" class="image fit thumb"><img src="{{ url('Assets/Inventory/Template/images/thumbs/familias.jpg') }}" alt="" /></a>
-								<h3><a href="{{ url('/home/inventory/families') }}">Famílias</a></h3>
+								<h3><a href="{{ url('/home/inventory/home/list-families') }}">Famílias</a></h3>
 							</article>
 							<article class="col-6 col-12-xsmall work-item">
 								<a href="{{ url('Assets/Inventory/Template/images/fulls/exoticanativa.jpg') }}" class="image fit thumb"><img src="{{ url('Assets/Inventory/Template/images/thumbs/exoticanativa.jpg') }}" alt="" /></a>
-								<h3><a href="{{ url('/home/inventory/exoticnative') }}">Exótica/Nativa</a></h3>
+								<h3><a href="{{ url('/home/inventory/home/list-exoticnative') }}">Exótica/Nativa</a></h3>
 							</article>
 						</div>
 					</section>

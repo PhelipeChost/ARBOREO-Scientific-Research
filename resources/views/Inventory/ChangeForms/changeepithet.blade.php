@@ -14,7 +14,7 @@
    ]);
    
   
-    $url = 'http://localhost:8090/inventario/epitetos/'.$codepiteto;
+    $url = 'http://inventarioarboreo.feis.unesp.br:8090/inventario/epitetos/'.$codepiteto;
    
     $response = $client->request('PUT', $url,[
       'body' => json_encode([

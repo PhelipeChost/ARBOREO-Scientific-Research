@@ -9,7 +9,7 @@
      $client = new Client();
 
 
-    $url = 'http://localhost:8090/inventario/familias';
+    $url = 'http://inventarioarboreo.feis.unesp.br:8090/inventario/familias';
 
 
      $response = $client->request('POST', $url,[

@@ -26,7 +26,7 @@
     
       
      if($response->getStatusCode() == 200){
-        return redirect()->to('list-species')->send();
+        return redirect()->to('/home/inventory/list-species')->send();
      }
       
      //$data = json_decode($response->getBody() );

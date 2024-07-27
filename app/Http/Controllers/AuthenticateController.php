@@ -21,7 +21,7 @@ class AuthenticateController extends Controller
             'senha' => 'required|string|min:3',
         ]);
 
-        $response = Http::get('http://localhost:8090/inventario/usuarios');
+        $response = Http::get('http://inventarioarboreo.feis.unesp.br:8090/inventario/usuarios');
 
         if ($response->failed()) {
             return response()->json(['error' => 'Failed to connect to the API'], 500);
@@ -81,4 +81,5 @@ class AuthenticateController extends Controller
         return response()->json(['error' => 'Account not found'], 404);
         
     }
+    
 }

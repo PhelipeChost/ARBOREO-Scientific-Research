@@ -13,7 +13,7 @@ $client = new Client([
 ]);
 
 
-$url = 'http://localhost:8090/inventario/autores';
+//$url = 'http://inventarioarboreo.feis.unesp.br:8090/inventario/autores';
 
 $response = $client->request('GET', $url, []);
 

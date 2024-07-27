@@ -12,7 +12,7 @@
   ]);
   
  
-   $url = 'http://localhost:8090/inventario/nativasexoticas/'.$codnativaexotica;
+   $url = 'http://inventarioarboreo.feis.unesp.br:8090/inventario/nativaexoticas/'.$codnativaexotica;
   
    $response = $client->request('GET', $url,[]);
     

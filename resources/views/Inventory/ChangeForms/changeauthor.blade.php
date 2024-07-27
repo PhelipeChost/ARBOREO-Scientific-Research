@@ -29,7 +29,7 @@
     //echo "Status: " . $response->getStatusCode() . PHP_EOL;
      
     if($response->getStatusCode() ==  200){
-      return redirect()->to('list-author')->send();
+      return redirect()->to('/home/inventory/list-author')->send();
 
     ?>
     

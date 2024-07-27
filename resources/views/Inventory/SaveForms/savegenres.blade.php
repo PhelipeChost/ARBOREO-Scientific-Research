@@ -26,7 +26,7 @@
     
       
      if($response->getStatusCode() == 200){
-        return redirect()->to('list-genres')->send();
+        return redirect()->to('/home/inventory/list-genres')->send();
      }
       
      //$data = json_decode($response->getBody() );

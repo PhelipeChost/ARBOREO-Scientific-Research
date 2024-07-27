@@ -22,6 +22,12 @@ class HomeController extends Controller
     //  *
     //  * @return Renderable
     //  */
+
+    public function __construct()
+    {
+        $this->middleware('auth.check');
+    }
+    
     public function Home(): Renderable
     {
         return view('home');

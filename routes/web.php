@@ -38,15 +38,21 @@ Route::get('/menu', [App\Http\Controllers\Inventory\MenuController::class, 'menu
 
     // Carries (Carregar)
     Route::get('/home/inventory/carrieslist', [App\Http\Controllers\Inventory\CarriesForms\CarrieslistController::class, 'carrieslist'])->name('inventory.CarriesForms.carrieslist');
+    Route::get('/home/inventory/carrieslistauthor', [App\Http\Controllers\Inventory\CarriesForms\CarrieslistauthorController::class, 'carrieslistauthor'])->name('inventory.CarriesForms.carrieslistauthor');
+    Route::get('/home/inventory/carrieslistgenres', [App\Http\Controllers\Inventory\CarriesForms\CarrieslistgenresController::class, 'carrieslistgenres'])->name('inventory.CarriesForms.carrieslistgenres');
+    Route::get('/home/inventory/carrieslistspecies', [App\Http\Controllers\Inventory\CarriesForms\CarrieslistspeciesController::class, 'carrieslistspecies'])->name('inventory.CarriesForms.carrieslistspecies');
+    Route::get('/home/inventory/carrieslistepithet', [App\Http\Controllers\Inventory\CarriesForms\CarrieslistepithetController::class, 'carrieslistepithet'])->name('inventory.CarriesForms.carrieslistepithet');
+    Route::get('/home/inventory/carrieslistfamilies', [App\Http\Controllers\Inventory\CarriesForms\CarrieslistfamiliesController::class, 'carrieslistfamilies'])->name('inventory.CarriesForms.carrieslistfamilies');
+    Route::get('/home/inventory/carrieslistexoticnative', [App\Http\Controllers\Inventory\CarriesForms\CarrieslistexoticnativeController::class, 'carrieslistexoticnative'])->name('inventory.CarriesForms.carrieslistexoticnative');
 
     // Registrations (Cadastros)
+    Route::get('/home/inventory/plant', [App\Http\Controllers\Inventory\Registrations\PlantController::class, 'plant'])->name('inventory.registrations.plant');
     Route::get('/home/inventory/authors', [App\Http\Controllers\Inventory\Registrations\AuthorController::class, 'author'])->name('inventory.registrations.author');
     Route::get('/home/inventory/genres', [App\Http\Controllers\Inventory\Registrations\GenresController::class, 'genres'])->name('inventory.registrations.genres');
     Route::get('/home/inventory/species', [App\Http\Controllers\Inventory\Registrations\SpeciesController::class, 'species'])->name('inventory.registrations.species');
     Route::get('/home/inventory/epithet', [App\Http\Controllers\Inventory\Registrations\EpithetController::class, 'epithet'])->name('inventory.registrations.epithet');
     Route::get('/home/inventory/families', [App\Http\Controllers\Inventory\Registrations\FamiliesController::class, 'families'])->name('inventory.registrations.families');
     Route::get('/home/inventory/exoticnative', [App\Http\Controllers\Inventory\Registrations\ExoticnativeController::class, 'exoticnative'])->name('inventory.registrations.exoticnative');
-    Route::get('/home/inventory/plant', [App\Http\Controllers\Inventory\Registrations\PlantController::class, 'plant'])->name('inventory.registrations.plant');
 
     // List (Listar)
     Route::get('/home/inventory/list-author', [App\Http\Controllers\Inventory\ListForms\ListauthorController::class, 'listauthor'])->name('inventory.ListForms.listauthor');
@@ -55,6 +61,7 @@ Route::get('/menu', [App\Http\Controllers\Inventory\MenuController::class, 'menu
     Route::get('/home/inventory/list-epithet', [App\Http\Controllers\Inventory\ListForms\ListepithetController::class, 'listepithet'])->name('inventory.list.listepithet');
     Route::get('/home/inventory/list-families', [App\Http\Controllers\Inventory\ListForms\ListfamiliesController::class, 'listfamilies'])->name('inventory.list.listfamilies');
     Route::get('/home/inventory/list-exoticnative', [App\Http\Controllers\Inventory\ListForms\ListexoticnativeController::class, 'listexoticnative'])->name('inventory.registrations.listexoticnative');
+    Route::get('/home/inventory/list-locations', [App\Http\Controllers\Inventory\ListForms\ListlocationsController::class, 'listlocations'])->name('inventory.registrations.listlocations');
 
     // EditForms (Editar Formulários)
     Route::get('/home/inventory/list-author/edit-author', [App\Http\Controllers\Inventory\EditForms\EditAuthorController::class, 'editauthor'])->name('inventory.editforms.editauthor');
@@ -62,6 +69,7 @@ Route::get('/menu', [App\Http\Controllers\Inventory\MenuController::class, 'menu
     Route::get('/home/inventory/list-species/edit-species', [App\Http\Controllers\Inventory\EditForms\EditspeciesController::class, 'editspecies'])->name('inventory.editforms.editspecies');
     Route::get('/home/inventory/list-epithet/edit-epithet', [App\Http\Controllers\Inventory\EditForms\EditepithetController::class, 'editepithet'])->name('inventory.editforms.editepithet');
     Route::get('/home/inventory/list-families/edit-families', [App\Http\Controllers\Inventory\EditForms\EditfamiliesController::class, 'editfamilies'])->name('inventory.editforms.editfamilies');
+    Route::get('/home/inventory/list-locations/edit-locations', [App\Http\Controllers\Inventory\EditForms\EditlocationsController::class, 'editlocations'])->name('inventory.editforms.editlocations');
     Route::get('/home/inventory/list-exoticnative/edit-exoticnative', [App\Http\Controllers\Inventory\EditForms\EditexoticnativeController::class, 'editexoticnative'])->name('inventory.editforms.editexoticnative');
 
     // ChangeForms (processo de edição de formulário que altera os registros Formulários)
@@ -70,6 +78,7 @@ Route::get('/menu', [App\Http\Controllers\Inventory\MenuController::class, 'menu
     Route::get('/change-species', [App\Http\Controllers\Inventory\ChangeForms\ChangespeciesController::class, 'changespecies'])->name('inventory.changeforms.changespecies');
     Route::get('/change-epithet', [App\Http\Controllers\Inventory\ChangeForms\ChangeepithetController::class, 'changeepithet'])->name('inventory.changeforms.changeepithet');
     Route::get('/change-families', [App\Http\Controllers\Inventory\ChangeForms\ChangefamiliesController::class, 'changefamilies'])->name('inventory.changeforms.changefamilies');
+    Route::get('/change-locations', [App\Http\Controllers\Inventory\ChangeForms\ChangelocationsController::class, 'changelocations'])->name('inventory.changeforms.changelocations');
     Route::get('/change-exoticnative', [App\Http\Controllers\Inventory\ChangeForms\ChangeexoticnativeController::class, 'changeexoticnative'])->name('inventory.changeforms.changeexoticnative');
 
     // SaveForms (processo de salvamento de cadastros)
@@ -79,6 +88,8 @@ Route::get('/menu', [App\Http\Controllers\Inventory\MenuController::class, 'menu
     Route::get('/save-epithet', [App\Http\Controllers\Inventory\SaveForms\SaveepithetController::class, 'saveepithet'])->name('inventory.saveforms.saveepithet');
     Route::get('/save-families', [App\Http\Controllers\Inventory\SaveForms\SavefamiliesController::class, 'savefamilies'])->name('inventory.saveforms.savefamilies');
     Route::get('/save-exoticnative', [App\Http\Controllers\Inventory\SaveForms\SaveexoticnativeController::class, 'saveexoticnative'])->name('inventory.saveforms.saveexoticnative');
+    Route::get('/save-locations', [App\Http\Controllers\Inventory\SaveForms\SavelocationsController::class, 'savelocations'])->name('inventory.saveforms.savelocations');
+    Route::get('/save-plant', [App\Http\Controllers\Inventory\SaveForms\SaveplantController::class, 'saveplant'])->name('inventory.saveforms.saveplant');
 
     // DeleteForms (processo de exclusão de registros)
     Route::get('/remove-author', [App\Http\Controllers\Inventory\DeleteForms\RemoveAuthorController::class, 'removeauthor'])->name('inventory.deleteforms.removeauthor');
@@ -86,6 +97,7 @@ Route::get('/menu', [App\Http\Controllers\Inventory\MenuController::class, 'menu
     Route::get('/remove-species', [App\Http\Controllers\Inventory\DeleteForms\RemovespeciesController::class, 'removespecies'])->name('inventory.deleteforms.removespecies');
     Route::get('/remove-epithet', [App\Http\Controllers\Inventory\DeleteForms\RemoveepithetController::class, 'removeepithet'])->name('inventory.deleteforms.removeepithet');
     Route::get('/remove-families', [App\Http\Controllers\Inventory\DeleteForms\RemovefamiliesController::class, 'removefamilies'])->name('inventory.deleteforms.removefamilies');
+    Route::get('/remove-locations', [App\Http\Controllers\Inventory\DeleteForms\RemovelocationsController::class, 'removelocations'])->name('inventory.deleteforms.removelocations');
     Route::get('/remove-exoticnative', [App\Http\Controllers\Inventory\DeleteForms\RemoveexoticnativeController::class, 'removeexoticnative'])->name('inventory.deleteforms.removeexoticnative');
 
 Route::get('/map', [App\Http\Controllers\MapController::class, 'map']);

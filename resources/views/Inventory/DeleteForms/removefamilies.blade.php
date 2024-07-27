@@ -13,7 +13,7 @@
   ]);
 
 
-   $url = 'http://localhost:8090/inventario/familias/'.$codigo;
+   $url = 'http://inventarioarboreo.feis.unesp.br:8090/inventario/familias/'.$codigo;
 
    $response = $client->request('DELETE', $url,[]);
 

@@ -10,7 +10,7 @@
      $client = new Client();
     
    
-    $url = 'http://localhost:8090/inventario/nativasexoticas';
+    $url = 'http://inventarioarboreo.feis.unesp.br:8090/inventario/nativaexotica';
    
     
      $response = $client->request('POST', $url,[
