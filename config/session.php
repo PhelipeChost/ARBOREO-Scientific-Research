@@ -211,4 +211,13 @@ return [
 
     'partitioned' => false,
 
+    'session' => [
+    'driver' => 'file',
+    // Outras configurações...
+    ],
+
+    'lifetime' => 120, // 120 minutos
+
+    'expire_on_close' => false
+
 ];

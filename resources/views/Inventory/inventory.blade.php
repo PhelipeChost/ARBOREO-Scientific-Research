@@ -103,14 +103,49 @@
 						<h2>Mantenha Contato Conosco</h2>
 						<div class="row">
 							<div class="col-8 col-12-small">
-								<form method="post" action="#">
-									<div class="row gtr-uniform gtr-50">
-										<div class="col-12"><textarea name="message" id="message" placeholder="Mensagem" rows="4"></textarea></div>
-									</div>
+								<form method="post" action="{{ url('/enviar-email') }}">
+								@csrf
+									<style>
+										.campomensagem { 
+											padding: 10px;
+											box-shadow: 0 0 0 0;
+											border: 0 none;
+											outline: 0;
+											text-decoration: none;
+											width: 100%;
+											background: #F7F7F7;
+										}
+
+										.campomensagem:hover { 
+											box-shadow: 0 0 0 0;
+											border: 0 none;
+											outline: 0;
+											text-decoration: none;
+										}
+									</style>
+									    @if (session('success'))
+											<div style="color: green;">
+												{{ session('success') }}
+											</div>
+										@endif
+
+										@if (session('error'))
+											<div style="color: red;">
+												{{ session('error') }}
+											</div>
+										@endif
+										<div class="row gtr-uniform gtr-50">
+											<div class="col-12">
+												<input type="text" name="email" id="name" placeholder="Email" class="campomensagem" required />
+											</div>
+											<div class="col-12">
+												<textarea name="message" id="message" placeholder="Mensagem" rows="4" required></textarea>
+											</div>
+										</div>
+										<ul class="actions">
+											<li><input type="submit" value="Enviar" /></li>
+										</ul>
 								</form>
-								<ul class="actions">
-									<li><input type="submit" value="Send Message" /></li>
-								</ul>
 							</div>
 							<div class="col-4 col-12-small">
 								<ul class="labeled-icons">

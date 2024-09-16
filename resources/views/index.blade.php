@@ -173,22 +173,7 @@
 
                 <h4>Contato</h4>
 
-                <p>Adicione aqui a sua mensagem!</p>
-
-                <div class="subscribe-form">
-
-                    <form id="mc-form" class="group" novalidate="novalidate">
-
-                        <input type="email" value="" name="EMAIL" class="email" id="mc-email" placeholder="Mensagem" required="">
-
-                        <input type="submit" name="subscribe" value="Send">
-
-                        <label for="mc-email" class="subscribe-message"></label>
-
-                    </form>
-
-                </div>
-
+                <p style="color: #DAA520">É preciso estar logado para enviar um email!</p>
             </div> <!-- end footer-subscribe -->
 
         </div> <!-- /row -->

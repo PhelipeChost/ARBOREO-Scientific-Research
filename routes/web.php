@@ -31,6 +31,8 @@ Route::get('/start-registration', [App\Http\Controllers\RegisteredController::cl
 Route::get('/forgot-password', [App\Http\Controllers\PassForgotController::class, 'PassForgot']);
 
 // Inventory
+    //Email
+    Route::post('/enviar-email', [App\Http\Controllers\EmailController::class, 'enviarEmail'])->name('enviarEmail');
 Route::get('/home/inventory', [App\Http\Controllers\Inventory\InventoryController::class, 'inventory'])->name('inventory.inventory');
 Route::get('/header', [App\Http\Controllers\Inventory\HeaderController::class, 'header'])->name('inventory.header');
 Route::get('/baseboard', [App\Http\Controllers\Inventory\BaseboardController::class, 'baseboard'])->name('inventory.baseboard');

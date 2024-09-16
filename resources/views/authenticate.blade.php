@@ -14,7 +14,7 @@
                 Conecte-se e viage pela nossa Unesp!
             </div>
         </div>
-        <form class="form" method="POST" action="{{ route('authenticate.user') }}" method="post">
+        <form class="form" method="POST" action="{{ route('authenticate.user') }}">
             @csrf
             <div class="form__field">
                 <label for="email" class="form__label">Email</label>

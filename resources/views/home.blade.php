@@ -464,14 +464,16 @@
     
                     <div class="subscribe-form">
     
-                        <form id="mc-form" class="group" novalidate="novalidate">
-    
-                            <input type="email" value="" name="EMAIL" class="email" id="mc-email" placeholder="Mensagem" required="">
-    
-                            <input type="submit" name="subscribe" value="Send">
-    
-                            <label for="mc-email" class="subscribe-message"></label>
-    
+                        <form method="post" action="{{ url('/enviar-email') }}" class="group">
+                            @csrf
+                            <style>
+                                .inputemail {
+                                    width: 100%;
+                                }
+                            </style>
+                            <input class="inputemail" type="text" name="email" id="mc-email" placeholder="Email" required>
+                            <textarea class="inputemail" type="text" name="message" id="mc-email" placeholder="Mensagem" required></textarea>
+                            <input type="submit" value="Enviar">
                         </form>
     
                     </div>
