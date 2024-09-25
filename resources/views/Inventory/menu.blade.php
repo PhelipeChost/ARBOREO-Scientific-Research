@@ -21,18 +21,16 @@
           <li class="nav-item">
             <a class="nav-link" href="{{ url('create')}}" style="color: red; font-weight: 600">Marcação</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url('/home/inventory')}}">Inventário</a>
+          </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                Cadastros
             </a>
             <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="{{ url('/home/inventory/authors') }}">Autores</a></li>
-              <li><a class="dropdown-item" href="{{ url('/home/inventory/genres') }}">Gêneros</a></li>
-              <li><a class="dropdown-item" href="{{ url('/home/inventory/species') }}">Espécies</a></li>
-              <li><a class="dropdown-item" href="{{ url('/home/inventory/epithet') }}">Epíteto</a></li>
-              <li><a class="dropdown-item" href="{{ url('/home/inventory/families') }}">Famílias</a></li>
+            <li><a class="dropdown-item" href="{{ url('/home/inventory/generalrecords') }}">Gerais</a></li>
               <li><a class="dropdown-item" href="{{ url('/home/inventory/plant')}}">Plantas</a></li>
-              <li><a class="dropdown-item" href="{{ url('/home/inventory/exoticnative')}}">Nativa / Exótica</a></li>
 
 
             </ul>
@@ -49,7 +47,7 @@
               <li><a class="dropdown-item" href="{{ url('/home/inventory/list-families') }}">Famílias</a></li>
               <li><a class="dropdown-item" href="{{ url('/home/inventory/list-locations') }}">Locais</a></li>
               <li><a class="dropdown-item" href="{{ url('/home/inventory/list-exoticnative')}}">Nativa / Exótica</a></li>
-              <li><a class="dropdown-item" href="">Tipo Usuários</a></li>
+              <li><a class="dropdown-item" href="{{ url('/home/inventory/usuario-tips')}}">Tipo Usuários</a></li>
             </ul>
           </li> 
         </ul>
@@ -58,4 +56,3 @@
   </nav>
 </body>
 </html>
-

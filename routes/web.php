@@ -1,6 +1,7 @@
 <?php
 
-use Illuminate\Support\Facades\Auth;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,9 +23,10 @@ Auth::routes();
 
 Route::get('/', [App\Http\Controllers\IndexController::class, 'index']);
 
+// Autenticação
 Route::get('/authenticate', [App\Http\Controllers\AuthenticateController::class, 'Authenticate'])->name('authenticate');
 Route::post('/authenticate-user', [App\Http\Controllers\AuthenticateController::class, 'authenticateUser'])->name('authenticate.user');
-Route::post('/end-session', [App\Http\Controllers\AuthenticateController::class, 'endSession'])->name('end.session');
+Route::get('/logout', [AuthenticateController::class, 'endsession'])->name('logout');
 Route::post('/check-account-status', [App\Http\Controllers\AuthenticateController::class, 'checkAccountStatus'])->name('check.account.status');
 
 Route::get('/start-registration', [App\Http\Controllers\RegisteredController::class, 'Registered']);
@@ -49,6 +51,7 @@ Route::get('/menu', [App\Http\Controllers\Inventory\MenuController::class, 'menu
 
     // Registrations (Cadastros)
     Route::get('/home/inventory/plant', [App\Http\Controllers\Inventory\Registrations\PlantController::class, 'plant'])->name('inventory.registrations.plant');
+    Route::get('/home/inventory/generalrecords', [App\Http\Controllers\Inventory\Registrations\GeneralrecordsController::class, 'generalrecords'])->name('inventory.registrations.generalrecords');
     Route::get('/home/inventory/authors', [App\Http\Controllers\Inventory\Registrations\AuthorController::class, 'author'])->name('inventory.registrations.author');
     Route::get('/home/inventory/genres', [App\Http\Controllers\Inventory\Registrations\GenresController::class, 'genres'])->name('inventory.registrations.genres');
     Route::get('/home/inventory/species', [App\Http\Controllers\Inventory\Registrations\SpeciesController::class, 'species'])->name('inventory.registrations.species');
@@ -107,6 +110,10 @@ Route::get('/map', [App\Http\Controllers\MapController::class, 'map']);
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'Home'])->name('home');
-Route::get('/create', [App\Http\Controllers\CreateController::class, 'Create'])->name('features.Create');
+use App\Http\Controllers\CreateController;
+
+Route::get('/create', [CreateController::class, 'create'])->name('features.create'); // Exibe o formulário
+Route::post('/plantas', [CreateController::class, 'store'])->name('create.store'); // Envia os dados via POST
+
 
 Route::any('/features', [App\Http\Controllers\FeatureController::class, 'store'])->name('features.store');

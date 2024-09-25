@@ -1,6 +1,5 @@
+@include('inventory.header')
 <?php
-    
-    include("cabecalho.php");
 
     $codigo = $_GET["codlocal"];
     
@@ -33,4 +32,4 @@
   }
 
 ?>
-<?php include("rodape.php"); ?>
+@include('inventory.baseboard')

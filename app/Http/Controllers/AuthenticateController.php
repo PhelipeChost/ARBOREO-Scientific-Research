@@ -4,9 +4,6 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Http;
-use Illuminate\View\View;
-use Illuminate\Contracts\View\Factory;
-use Illuminate\Contracts\Foundation\Application;
 
 class AuthenticateController extends Controller
 {
@@ -15,7 +12,6 @@ class AuthenticateController extends Controller
         return view('authenticate');
     }
 
-    
     public function authenticateUser(Request $request)
     {
         $request->validate([
@@ -43,7 +39,6 @@ class AuthenticateController extends Controller
         return redirect()->back()->withErrors(['email' => 'Essas credenciais não são reais'])->withInput();
     }
 
-
     public function checkAccountStatus(Request $request)
     {
         $request->validate([
@@ -70,7 +65,16 @@ class AuthenticateController extends Controller
         }
 
         return response()->json(['error' => 'Account not found'], 404);
-        
     }
-    
+
+    // Método de logout
+    public function endsession()
+    {
+        // Remove o usuário da sessão
+        session()->forget('user');
+        session()->flush();
+
+        // Redireciona para a página de login
+        return redirect()->route('authenticate');
+    }
 }

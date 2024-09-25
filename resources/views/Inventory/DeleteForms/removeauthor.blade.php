@@ -1,4 +1,4 @@
-@include('Inventory.baseboard')
+@include('inventory.header')
 <?php
     $codigo = $_GET["codautor"];
     
@@ -12,18 +12,19 @@
   ]);
   
  
-   $url = 'http://inventarioarboreo.feis.unesp.br:8090/inventario/autores'.$codigo;
+   $url = 'http://inventarioarboreo.feis.unesp.br:8090/inventario/autores/'.$codigo;
   
-   $response = $client->delete('http://inventarioarboreo.feis.unesp.br:8090/inventario/autores/' . $codigo);
+   $response = $client->request('DELETE', $url,[]);
     
    //echo "Status: " . $response->getStatusCode() . PHP_EOL;
     
-  if($response->getStatusCode()==200){
+   if($response->getStatusCode()==200){
     return redirect()->to('home/inventory/list-author')->send();
 
   } else {
       echo $nome . ',não removido!';
   }
 
+
 ?>
-@include('Inventory.baseboard')
+@include('inventory.baseboard')

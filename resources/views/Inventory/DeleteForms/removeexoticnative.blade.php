@@ -12,23 +12,19 @@
   ]);
   
  
-   $url = 'http://localhost:8090/inventario/nativasexoticas/'.$codigo;
+   $url = 'http://inventarioarboreo.feis.unesp.br:8090/inventario/nativasexoticas/'.$codigo;
   
    $response = $client->request('DELETE', $url,[]);
     
    //echo "Status: " . $response->getStatusCode() . PHP_EOL;
     
    if($response->getStatusCode()==200){
-    return redirect()->to('/home/inventory/list-exoticnative')->send();
+    return redirect()->to('home/inventory/list-exoticnative')->send();
 
-    ?>
-
-  <?php
-  } else { ?>
-    <p class="alert text-danger">   Epiteto <?php echo $nome; ?>,não removido!
-    </p>
-<?php
+  } else {
+      echo $nome . ',não removido!';
   }
+
 
 ?>
 @include('inventory.baseboard')
