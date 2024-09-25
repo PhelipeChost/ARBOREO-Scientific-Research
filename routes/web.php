@@ -35,10 +35,10 @@ Route::get('/forgot-password', [App\Http\Controllers\PassForgotController::class
 // Inventory
     //Email
     Route::post('/enviar-email', [App\Http\Controllers\EmailController::class, 'enviarEmail'])->name('enviarEmail');
-Route::get('/home/inventory', [App\Http\Controllers\Inventory\InventoryController::class, 'inventory'])->name('inventory.inventory');
-Route::get('/header', [App\Http\Controllers\Inventory\HeaderController::class, 'header'])->name('inventory.header');
-Route::get('/baseboard', [App\Http\Controllers\Inventory\BaseboardController::class, 'baseboard'])->name('inventory.baseboard');
-Route::get('/menu', [App\Http\Controllers\Inventory\MenuController::class, 'menu'])->name('inventory.menu');
+Route::get('/home/inventory', [App\Http\Controllers\Inventory\InventoryController::class, 'inventory'])->name('Inventory.inventory');
+Route::get('/header', [App\Http\Controllers\Inventory\HeaderController::class, 'header'])->name('Inventory.header');
+Route::get('/baseboard', [App\Http\Controllers\Inventory\BaseboardController::class, 'baseboard'])->name('Inventory.baseboard');
+Route::get('/menu', [App\Http\Controllers\Inventory\MenuController::class, 'menu'])->name('Inventory.menu');
 
     // Carries (Carregar)
     Route::get('/home/inventory/carrieslist', [App\Http\Controllers\Inventory\CarriesForms\CarrieslistController::class, 'carrieslist'])->name('inventory.CarriesForms.carrieslist');
@@ -60,7 +60,7 @@ Route::get('/menu', [App\Http\Controllers\Inventory\MenuController::class, 'menu
     Route::get('/home/inventory/exoticnative', [App\Http\Controllers\Inventory\Registrations\ExoticnativeController::class, 'exoticnative'])->name('inventory.registrations.exoticnative');
 
     // List (Listar)
-    Route::get('/home/inventory/list-author', [App\Http\Controllers\Inventory\ListForms\ListauthorController::class, 'listauthor'])->name('inventory.ListForms.listauthor');
+    Route::get('/home/inventory/list-author', [App\Http\Controllers\Inventory\ListForms\ListauthorController::class, 'Listauthor'])->name('inventory.ListForms.listauthor');
     Route::get('/home/inventory/list-genres', [App\Http\Controllers\Inventory\ListForms\ListgenresController::class, 'listgenres'])->name('inventory.list.listgenres');
     Route::get('/home/inventory/list-species', [App\Http\Controllers\Inventory\ListForms\ListspeciesController::class, 'listspecies'])->name('inventory.list.listspecies');
     Route::get('/home/inventory/list-epithet', [App\Http\Controllers\Inventory\ListForms\ListepithetController::class, 'listepithet'])->name('inventory.list.listepithet');

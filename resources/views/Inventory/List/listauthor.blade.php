@@ -77,7 +77,7 @@
     }
 </style>
 
-@include('inventory.header')
+@include('Inventory.header')
 
 <h1>Autores Cadastrados</h1>
 <table>
@@ -126,4 +126,4 @@
     </tbody>
 </table>
 
-@include('inventory.baseboard')
+@include('Inventory.baseboard')

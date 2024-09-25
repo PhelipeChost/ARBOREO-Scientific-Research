@@ -76,7 +76,7 @@
         }
     }
 </style>
-@include('inventory.header')
+@include('Inventory.header')
             <h1>Nativa/Exóticas Cadastradas</h1>
 
 

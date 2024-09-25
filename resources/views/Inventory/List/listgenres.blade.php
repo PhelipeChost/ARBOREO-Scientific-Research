@@ -77,7 +77,7 @@
     }
 </style>
 
-@include('inventory.header')
+@include('Inventory.header')
             <h1>Gêneros Cadastradas</h1>
 
 
