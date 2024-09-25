@@ -6,83 +6,83 @@
     <title>Lista de autores</title>
 
     <style>
-    /* Estilos gerais para a tabela */
-    table {
-        width: 100%;
-        border-collapse: collapse;
-        background-color: #343a40;
-        color: white;
-        margin-bottom: 20px;
-    }
-
-    th, td {
-        padding: 12px;
-        text-align: left;
-        border-bottom: 1px solid #444;
-    }
-
-    th {
-        background-color: #212529;
-    }
-
-    tr:hover {
-        background-color: #2c3034;
-    }
-
-    /* Estilos para botões */
-    .btn-outline-primary, .btn-outline-danger {
-        border: none;
-        padding: 8px 12px;
-        color: white;
-        cursor: pointer;
-        background-color: transparent;
-    }
-
-    .btn-outline-primary:hover {
-        background-color: rgba(61, 73, 241, 0.2);
-    }
-
-    .btn-outline-danger:hover {
-        background-color: rgba(255, 0, 0, 0.2);
-    }
-
-    svg {
-        vertical-align: middle;
-    }
-
-    @media (max-width: 768px) {
-        thead {
-            display: none;
+        /* Estilos gerais para a tabela */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #343a40;
+            color: white;
+            margin-bottom: 20px;
         }
 
-        tbody tr {
-            display: block;
-            margin-bottom: 10px;
-            border-bottom: 2px solid #444;
-        }
-
-        tbody td {
-            display: block;
-            text-align: right;
-            padding-left: 50%;
-            position: relative;
-        }
-
-        tbody td:before {
-            content: attr(data-label); 
-            position: absolute;
-            left: 10px;
-            top: 12px;
-            font-weight: bold;
+        th, td {
+            padding: 12px;
             text-align: left;
-            color: #bbb;
+            border-bottom: 1px solid #444;
         }
 
-        tbody td:last-child {
-            border-bottom: 0;
+        th {
+            background-color: #212529;
         }
-    }
-</style>
+
+        tr:hover {
+            background-color: #2c3034;
+        }
+
+        /* Estilos para botões */
+        .btn-outline-primary, .btn-outline-danger {
+            border: none;
+            padding: 8px 12px;
+            color: white;
+            cursor: pointer;
+            background-color: transparent;
+        }
+
+        .btn-outline-primary:hover {
+            background-color: rgba(61, 73, 241, 0.2);
+        }
+
+        .btn-outline-danger:hover {
+            background-color: rgba(255, 0, 0, 0.2);
+        }
+
+        svg {
+            vertical-align: middle;
+        }
+
+        @media (max-width: 768px) {
+            thead {
+                display: none;
+            }
+
+            tbody tr {
+                display: block;
+                margin-bottom: 10px;
+                border-bottom: 2px solid #444;
+            }
+
+            tbody td {
+                display: block;
+                text-align: right;
+                padding-left: 50%;
+                position: relative;
+            }
+
+            tbody td:before {
+                content: attr(data-label); 
+                position: absolute;
+                left: 10px;
+                top: 12px;
+                font-weight: bold;
+                text-align: left;
+                color: #bbb;
+            }
+
+            tbody td:last-child {
+                border-bottom: 0;
+            }
+        }  
+    </style>
 </head>
 <body>
     @include('Inventory.header')
