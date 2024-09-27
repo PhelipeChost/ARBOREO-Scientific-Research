@@ -44,7 +44,7 @@
               <li><a class="dropdown-item" href="{{ url('/home/inventory/list-species') }}">Espécies</a></li>
               <li><a class="dropdown-item" href="{{ url('/home/inventory/list-epithet') }}">Epíteto</a></li>
               <li><a class="dropdown-item" href="{{ url('/home/inventory/list-families') }}">Famílias</a></li>
-              <li><a class="dropdown-item" href="{{ url('/home/inventory/list-locations') }}">Locais</a></li>
+              <!-- <li><a class="dropdown-item" href="{{ url('/home/inventory/list-locations') }}">Locais</a></li> -->
               <li><a class="dropdown-item" href="{{ url('/home/inventory/list-exoticnative')}}">Nativa / Exótica</a></li>
               <li><a class="dropdown-item" href="{{ url('/home/inventory/usuario-tips')}}">Tipo Usuários</a></li>
             </ul>

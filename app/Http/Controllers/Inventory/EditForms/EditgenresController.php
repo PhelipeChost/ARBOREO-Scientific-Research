@@ -10,6 +10,6 @@ class EditgenresController extends Controller
 {
     public function Editgenres(): \Illuminate\Contracts\View\View|\Illuminate\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\Foundation\Application
     {
-        return view('Inventory.EditForms.editgenres');
+        return view('Inventory.EditForms.Editgenres');
     }
 }

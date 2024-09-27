@@ -10,6 +10,6 @@ class EditexoticnativeController extends Controller
 {
     public function Editexoticnative(): \Illuminate\Contracts\View\View|\Illuminate\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\Foundation\Application
     {
-        return view('Inventory.EditForms.editexoticnative');
+        return view('Inventory.EditForms.Editexoticnative');
     }
 }

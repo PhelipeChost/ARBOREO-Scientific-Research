@@ -10,7 +10,7 @@ class CreateController extends Controller
 {
     public function Create()
     {
-        return view('features.Create');
+        return view('features.create');
     }
 
     public function store(Request $request)

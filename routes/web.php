@@ -69,7 +69,7 @@ Route::get('/menu', [App\Http\Controllers\Inventory\MenuController::class, 'menu
     Route::get('/home/inventory/list-locations', [App\Http\Controllers\Inventory\ListForms\ListlocationsController::class, 'listlocations'])->name('inventory.registrations.listlocations');
 
     // EditForms (Editar Formulários)
-    Route::get('/home/inventory/list-author/edit-author', [App\Http\Controllers\Inventory\EditForms\EditAuthorController::class, 'editauthor'])->name('inventory.editforms.editauthor');
+    Route::get('/home/inventory/list-author/edit-author', [App\Http\Controllers\Inventory\EditForms\EditauthorController::class, 'editauthor'])->name('inventory.editforms.editauthor');
     Route::get('/home/inventory/list-genres/edit-genres', [App\Http\Controllers\Inventory\EditForms\EditgenresController::class, 'editgenres'])->name('inventory.editforms.editgenres');
     Route::get('/home/inventory/list-species/edit-species', [App\Http\Controllers\Inventory\EditForms\EditspeciesController::class, 'editspecies'])->name('inventory.editforms.editspecies');
     Route::get('/home/inventory/list-epithet/edit-epithet', [App\Http\Controllers\Inventory\EditForms\EditepithetController::class, 'editepithet'])->name('inventory.editforms.editepithet');

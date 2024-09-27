@@ -10,6 +10,6 @@ class EditauthorController extends Controller
 {
     public function Editauthor(): \Illuminate\Contracts\View\View|\Illuminate\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\Foundation\Application
     {
-        return view('Inventory.EditForms.editauthor');
+        return view('Inventory.EditForms.Editauthor');
     }
 }

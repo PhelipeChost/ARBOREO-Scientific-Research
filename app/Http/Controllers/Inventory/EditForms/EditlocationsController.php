@@ -10,6 +10,6 @@ class EditlocationsController extends Controller
 {
     public function Editlocations(): \Illuminate\Contracts\View\View|\Illuminate\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\Foundation\Application
     {
-        return view('Inventory.EditForms.editlocations');
+        return view('Inventory.EditForms.Editlocations');
     }
 }
