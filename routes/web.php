@@ -50,7 +50,13 @@ Route::get('/menu', [App\Http\Controllers\Inventory\MenuController::class, 'menu
     Route::get('/home/inventory/carrieslistexoticnative', [App\Http\Controllers\Inventory\CarriesForms\CarrieslistexoticnativeController::class, 'carrieslistexoticnative'])->name('inventory.CarriesForms.carrieslistexoticnative');
 
     // Registrations (Cadastros)
-    Route::get('/home/inventory/plant', [App\Http\Controllers\Inventory\Registrations\PlantController::class, 'plant'])->name('inventory.registrations.plant');
+    Route::get('/home/inventory/plant', function () {
+        return redirect('/legacy/planta-formulario.php');
+            if (!auth()->check()) {
+                return redirect('/login');
+            }
+            return response()->file(public_path('legacy/sua_pagina.php'));
+    })->middleware('auth.check');
     Route::get('/home/inventory/generalrecords', [App\Http\Controllers\Inventory\Registrations\GeneralrecordsController::class, 'generalrecords'])->name('inventory.registrations.generalrecords');
     Route::get('/home/inventory/authors', [App\Http\Controllers\Inventory\Registrations\AuthorController::class, 'author'])->name('inventory.registrations.author');
     Route::get('/home/inventory/genres', [App\Http\Controllers\Inventory\Registrations\GenresController::class, 'genres'])->name('inventory.registrations.genres');

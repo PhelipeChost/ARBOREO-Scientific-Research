@@ -27,68 +27,117 @@
 </head>
 <body>
 <div id="map"></div>
+
 <script>
     mapboxgl.accessToken = 'pk.eyJ1IjoibW9uaWtybyIsImEiOiJjbHYwMXM0MncxZnF1MmtvNXU4c252bDltIn0.nOOBwlBljykLvVNd-DT36w';
     const map = new mapboxgl.Map({
         container: 'map',
-        // Choose from Mapbox's core styles, or make your own style with Mapbox Studio
         style: 'mapbox://styles/monikro/clyzuo21501l001p93cat782b',
         center: [-51.3410, -20.4183],
         zoom: 17
     });
 
-    map.on('load', function() {
-    // Faça uma solicitação AJAX para o seu controlador Laravel que retorna os dados GeoJSON
-    const featureRoute = "{{ route('features.store') }}";
-    fetch(featureRoute)
-        .then(response => response.json())
-        .then(data => {
-            // Adicione os dados GeoJSON como uma fonte de dados para o mapa
-            map.addSource('places', {
-                'type': 'geojson',
-                'data': data // Os dados GeoJSON retornados pelo controlador
-            });
+    // Função para converter blob em URL para exibir a imagem
+    function blobToImageURL(blob) {
+        return URL.createObjectURL(blob);
+    }
 
-            map.on('click', 'places', (e) => {
-            // Copy coordinates array.
-            const coordinates = e.features[0].geometry.coordinates.slice();
-            const description = e.features[0].properties.description;
-
-            // Ensure that if the map is zoomed out such that multiple
-            // copies of the feature are visible, the popup appears
-            // over the copy being pointed to.
-            while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
-                coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+    // Função para formatar os dados no formato GeoJSON
+    function formatToGeoJSON(data) {
+        const features = data.map(item => ({
+            type: 'Feature',
+            geometry: {
+                type: 'Point',
+                coordinates: [item.planta.coordenada_o, item.planta.coordenada_s]
+            },
+            properties: {
+                description: `
+                    <strong>Espécie:</strong> ${item.planta.especie.nomeespecie} <br>
+                    <strong>Gênero:</strong> ${item.planta.genero.nomegenero} <br>
+                    <strong>Família:</strong> ${item.planta.familia.nomefamilia} <br>
+                    <strong>Local:</strong> ${item.planta.local.nomelocal} <br>
+                    <strong>Descrição:</strong> ${item.descricao} <br>
+                    <img src="" id="img-${item.codimagem}" alt="Imagem da planta" style="max-width:100px; max-height:100px;">
+                `,
+                imgBlob: item.foto, // Armazenamos o blob aqui para carregar depois
+                codimagem: item.codimagem
             }
+        }));
 
-            new mapboxgl.Popup()
-                .setLngLat(coordinates)
-                .setHTML(description)
-                .addTo(map);
-            });
+        return {
+            type: 'FeatureCollection',
+            features: features
+        };
+    }
 
-            // Adicione uma camada ao mapa para exibir as marcações
-            map.addLayer({
-                'id': 'places',
-                'type': 'circle',
-                'source': 'places',
-                'paint': {
-                    'circle-color': 'red',
-                    'circle-radius': 6,
-                    'circle-stroke-width': 2,
-                    'circle-stroke-color': '#ffffff'
-                }
+    map.on('load', function() {
+        // Requisição para a API de imagens e plantas
+        fetch('http://inventarioarboreo.feis.unesp.br:8090/inventario/imagens')
+            .then(response => response.json())
+            .then(data => {
+                // Formata os dados no formato GeoJSON
+                const geojsonData = formatToGeoJSON(data);
+
+                // Adiciona a fonte de dados ao mapa
+                map.addSource('places', {
+                    type: 'geojson',
+                    data: geojsonData
+                });
+
+                // Adiciona uma camada para mostrar os pontos
+                map.addLayer({
+                    id: 'places',
+                    type: 'circle',
+                    source: 'places',
+                    paint: {
+                        'circle-color': 'red',
+                        'circle-radius': 6,
+                        'circle-stroke-width': 2,
+                        'circle-stroke-color': '#ffffff'
+                    }
+                });
+
+                // Evento de clique no ponto
+                map.on('click', 'places', (e) => {
+                    const coordinates = e.features[0].geometry.coordinates.slice();
+                    const description = e.features[0].properties.description;
+                    const imgBlob = e.features[0].properties.imgBlob;
+                    const codimagem = e.features[0].properties.codimagem;
+
+                    // Gera o popup com as informações
+                    new mapboxgl.Popup()
+                        .setLngLat(coordinates)
+                        .setHTML(description)
+                        .addTo(map);
+
+                    // Converte o blob em URL da imagem e seta no elemento de imagem
+                    fetch(`data:image/jpeg;base64,${imgBlob}`).then(response => response.blob())
+                        .then(blob => {
+                            const imageUrl = blobToImageURL(blob);
+                            document.getElementById(`img-${codimagem}`).src = imageUrl;
+                        });
+                });
+
+                // Quando o cursor estiver sobre o ponto
+                map.on('mouseenter', 'places', () => {
+                    map.getCanvas().style.cursor = 'pointer';
+                });
+
+                // Quando o cursor sair do ponto
+                map.on('mouseleave', 'places', () => {
+                    map.getCanvas().style.cursor = '';
+                });
+            })
+            .catch(error => {
+                console.error('Erro ao carregar os dados da API:', error);
             });
-        })
-        .catch(error => {
-            console.error('Erro ao carregar os dados GeoJSON:', error);
-        });
     });
 
+    // Adiciona controle de navegação e tela cheia
     map.addControl(new mapboxgl.FullscreenControl({container: document.querySelector('body')}));
     map.addControl(new mapboxgl.NavigationControl());
-
 </script>
+
 
 </body>
 <script src="{{ url('https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js') }}" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
