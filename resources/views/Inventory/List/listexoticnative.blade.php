@@ -103,7 +103,7 @@
                 @foreach($data as $detalhes)
                     <tr>
                         <th scope="row">{{ $detalhes->codnativaexotica }}</th>
-                        <td data-label="Epíteto">{{ $detalhes->nomenativaexotica }}</td>
+                        <td data-label="Nativa/Exótica">{{ $detalhes->nomenativaexotica }}</td>
 
                         <td>
                             <form action="{{ url('/home/inventory/list-exoticnative/edit-exoticnative')}}" method="GET">

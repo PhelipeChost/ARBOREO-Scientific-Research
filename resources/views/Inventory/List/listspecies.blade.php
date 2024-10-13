@@ -101,7 +101,7 @@
                 @foreach($data as $detalhes)
                     <tr>
                         <th scope="row">{{ $detalhes->codespecie }}</th>
-                        <td data-label="Epíteto">{{ $detalhes->nomeespecie }}</td>
+                        <td data-label="Espécie">{{ $detalhes->nomeespecie }}</td>
 
                         <td>
                             <form action="{{ url('/home/inventory/list-species/edit-species')}}" method="GET">

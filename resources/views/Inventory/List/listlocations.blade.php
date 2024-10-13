@@ -101,7 +101,7 @@
                 @foreach($data as $detalhes)
                     <tr>
                         <th scope="row">{{ $detalhes->codlocal }}</th>
-                        <td data-label="Epíteto">{{ $detalhes->nomelocal }}</td>
+                        <td data-label="Local">{{ $detalhes->nomelocal }}</td>
 
                         <td>
                             <form action="{{ url('/home/inventory/list-locations/edit-locations')}}" method="GET">

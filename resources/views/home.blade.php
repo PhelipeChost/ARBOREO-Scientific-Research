@@ -126,288 +126,196 @@
 
     <!-- about
     ================================================== -->
+    
+
     <section id="about">
 
-        <div class="row about-intro">
+<div class="row about-intro">
 
-            <div class="col-four">
-                <h1 class="intro-header" data-aos="fade-up">About Our App</h1>
+    <div class="col-four">
+        <h1 class="intro-header" data-aos="fade-up">Apresentação</h1>
+    </div>
+    <div class="col-eight">
+        <p class="lead" data-aos="fade-up">
+            Esse é um projeto que nasceu para expor um antigo trabalho da Unesp de Ilha Solteira, Campus II. Aprecie enquanto é tempo e nos ajude deixar a região institucional dos Herbários mais arborizada!
+        </p>
+    </div>
+
+</div>
+
+<div class="row about-features">
+
+    <div class="features-list block-1-3 block-m-1-2 block-mob-full group">
+
+        <div class="bgrid feature" data-aos="fade-up">
+
+            <span class="icon"><i class="icon-window"></i></span>
+
+            <div class="service-content">
+
+                <h3>Plataforma Responsiva</h3>
+
+                <p>Nosso inventário arbóreo é uma plataforma digital acessível e responsiva, 
+                    permitindo que os usuários visualizem o mapa e todas as informações de árvores 
+                    de forma otimizada em qualquer dispositivo, seja celular, tablet ou computador.</p>
+
             </div>
-            <div class="col-eight">
-                <p class="lead" data-aos="fade-up">
-                    Excepteur enim magna veniam labore veniam sint. Ex aliqua esse proident ullamco voluptate. Nisi nisi nisi aliqua eiusmod dolor dolor proident deserunt occaecat elit Lorem reprehenderit. Id culpa veniam ex aliqua magna elit pariatur do nulla. Excepteur enim magna veniam labore veniam sint.
+
+            </div> <!-- /bgrid -->
+
+            <div class="bgrid feature" data-aos="fade-up">
+
+                <span class="icon"><i class="icon-image"></i></span>
+
+            <div class="service-content">
+                <h3>Dados Precisos</h3>
+
+                <p>As informações sobre a vegetação da Unesp exibidas no mapa são coletadas
+                     e verificadas, garantindo um alto nível de precisão. Todos os dados inseridos 
+                     e exibidos passam por um processo de atualização e validação, assegurando 
+                     que o usuário possa confiar plenamente nas informações disponíveis. Isso 
+                     garante que as visualizações no mapa representem fielmente a realidade da vegetação.
+                </p>
+
+
+            </div>
+
+        </div> <!-- /bgrid -->
+
+        <div class="bgrid feature" data-aos="fade-up">
+
+            <span class="icon"><i class="icon-paint-brush"></i></span>
+
+            <div class="service-content">
+                <h3>Design Elegante</h3>
+
+                <p>A plataforma oferece um design elegante, que combina simplicidade e sofisticação. A interface 
+                    é intuitiva e limpa, proporcionando uma navegação fluida e agradável. O uso de tons verdes, 
+                    reflete a conexão com a vegetação, criando uma experiência visual harmoniosa que une 
+                    funcionalidade e estilo. Esse visual moderno não apenas facilita o uso, mas também reforça 
+                    o elo com a natureza que a plataforma representa.
+                </p>
+
+            </div>
+
+    </div> <!-- end features-list -->
+
+</div> <!-- end about-features -->
+
+    <div class="row about-how" style="margin-top: 50px;">
+    <center><h3 class="intro-header" data-aos="fade-up" style="opacity: 30%">How The App Works?</h3></center>
+    <h1 class="intro-header" data-aos="fade-up">Como usar o aplicativo?</h1>
+
+    <div class="about-how-content" data-aos="fade-up">
+        <div class="about-how-steps block-1-2 block-tab-full group">
+
+            <div class="bgrid step" data-item="1">
+                <h3>Sign-Up</h3>
+                <p> Ao realizar Login, você tem acesso ao Inventário para realizar os devidos 
+                    cadastros de plantas ou manipular as informações já existentes.
+                </p>
+
+                <a class="button button-primary large" href="{{ url('/home/inventory')}}">Inventário Arbóreo</a>
+            </div>
+
+            <div class="bgrid step" data-item="2">
+                <h3>Cadastros</h3>
+                <p>Basta acessar o Inventário, e na sessão de cadastros é possível registrar 
+                    opções taxonômicas específicas ou realizar um cadastro geral da Planta.
+                </p>
+            </div>
+
+            <div class="bgrid step" data-item="3">
+                <h3>Listas</h3>
+                <p>Subsequente à um cadastro qualquer, é possível verificar na sessão de 
+                    Listagem no Inventário. Assim, poderá saber em que posição cada um se 
+                    encontra e quais as atualizações futuras provavelmente deverá fazer
+                </p>
+            </div>
+
+            <div class="bgrid step" data-item="4">
+                <h3>Upload de Imagem</h3>
+                <p>Assim que o cadastro de uma planta for sucedido, entregando as coordenadas reais
+                    corretas, o próximo passo é cadastrar a sua imagem. O registro pede que o usuário
+                    forneça o código cadastrado da planta, que pode ser visto nas listas de plantas 
+                    pelo próprio inventário. Se correta as informações, elas aparecerão no mapa.
                 </p>
             </div>
 
         </div>
+   </div> <!-- end about-how-content -->
 
-        <div class="row about-features">
+</div> <!-- end about-how -->
 
-            <div class="features-list block-1-3 block-m-1-2 block-mob-full group">
+</section> <!-- end about -->
 
-                <div class="bgrid feature" data-aos="fade-up">
 
-                    <span class="icon"><i class="icon-window"></i></span>
+<!-- pricing
+================================================== -->
+<section id="pricing">
+<div class="row pricing-content">
 
-                    <div class="service-content">
+    <div class="col-four pricing-intro">
+        <h1 class="intro-header" data-aos="fade-up">Our Pricing Options</h1>
 
-                        <h3>Fully Resposive</h3>
+        <p data-aos="fade-up">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
+        </p>
+    </div>
 
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
-                        </p>
-
-                    </div>
-
-                    </div> <!-- /bgrid -->
-
-                    <div class="bgrid feature" data-aos="fade-up">
-
-                        <span class="icon"><i class="icon-image"></i></span>
-
-                    <div class="service-content">
-                        <h3>Retina Ready</h3>
-
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
-                        </p>
-
-
-                    </div>
-
-                </div> <!-- /bgrid -->
-
-                <div class="bgrid feature" data-aos="fade-up">
-
-                    <span class="icon"><i class="icon-paint-brush"></i></span>
-
-                    <div class="service-content">
-                        <h3>Stylish Design</h3>
-
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
-                        </p>
-
-                    </div>
-
-                </div> <!-- /bgrid -->
-
-                    <div class="bgrid feature" data-aos="fade-up">
-
-                        <span class="icon"><i class="icon-file"></i></span>
-
-                    <div class="service-content">
-                        <h3>Clean Code</h3>
-
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
-                        </p>
-
-                    </div>
-
-                    </div> <!-- /bgrid -->
-
-                <div class="bgrid feature" data-aos="fade-up">
-
-                    <span class="icon"><i class="icon-sliders"></i></span>
-
-                    <div class="service-content">
-                        <h3>Easy To Customize</h3>
-
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
-                        </p>
-                    </div>
-
-                </div> <!-- /bgrid -->
-
-                <div class="bgrid feature" data-aos="fade-up">
-
-                    <span class="icon"><i class="icon-gift"></i></span>
-
-                    <div class="service-content">
-                        <h3>Free of Charge</h3>
-
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
-                        </p>
-
-                    </div>
-
-                </div> <!-- /bgrid -->
-
-            </div> <!-- end features-list -->
-
-        </div> <!-- end about-features -->
-
-        <div class="row about-how">
-
-            <h1 class="intro-header" data-aos="fade-up">How The App Works?</h1>
-
-            <div class="about-how-content" data-aos="fade-up">
-                <div class="about-how-steps block-1-2 block-tab-full group">
-
-                    <div class="bgrid step" data-item="1">
-                        <h3>Sign-Up</h3>
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-                        </p>
-                    </div>
-
-                    <div class="bgrid step" data-item="2">
-                        <h3>Upload</h3>
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-                        </p>
-                    </div>
-
-                    <div class="bgrid step" data-item="3">
-                        <h3>Create</h3>
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-                        </p>
-                    </div>
-
-                    <div class="bgrid step" data-item="4">
-                        <h3>Publish</h3>
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-                        </p>
-                    </div>
-
-                </div>
-           </div> <!-- end about-how-content -->
-
-        </div> <!-- end about-how -->
-
-        <div class="row about-bottom-image">
-
-           <img src="{{ url('Assets/images/app-screens-1200.png')}}"
-                srcset="{{ url('Assets/images/app-screens-600.png 600w')}},
-                        {{ url('Assets/images/images/app-screens-1200.png 1200w')}},
-                        {{ url('Assets/images/images/app-screens-2800.png 2800w')}}"
-                sizes="(max-width: 2800px) 100vw, 2800px"
-                alt="App Screenshots" data-aos="fade-up">
-
-        </div>  <!-- end about-bottom-image -->
-
-    </section> <!-- end about -->
-
-
-    <!-- pricing
-    ================================================== -->
-    <section id="pricing">
-        <div class="row pricing-content">
-
-            <div class="col-four pricing-intro">
-                <h1 class="intro-header" data-aos="fade-up">Our Pricing Options</h1>
-
-                <p data-aos="fade-up">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
-                </p>
-            </div>
-
-            <div class="col-eight pricing-table">
-                <div class="row">
-
-                    <div class="col-six plan-wrap">
-                        <div class="plan-block" data-aos="fade-up">
-
-                            <div class="plan-top-part">
-                                <h3 class="plan-block-title">Lite Plan</h3>
-                                <p class="plan-block-price"><sup>$</sup>25</p>
-                                <p class="plan-block-per">Per Month</p>
-                            </div>
-
-                            <div class="plan-bottom-part">
-                                <ul class="plan-block-features">
-                                    <li><span>3GB</span> Storage</li>
-                                    <li><span>10GB</span> Bandwidth</li>
-                                    <li><span>5</span> Databases</li>
-                                    <li><span>30</span> Email Accounts</li>
-                                </ul>
-
-                                <a class="button button-primary large" href="">Get Started</a>
-                            </div>
-
-                        </div>
-                    </div> <!-- end plan-wrap -->
-
-                    <div class="col-six plan-wrap">
-                        <div class="plan-block primary" data-aos="fade-up">
-
-                            <div class="plan-top-part">
-                                <h3 class="plan-block-title">Pro Plan</h3>
-                                <p class="plan-block-price"><sup>$</sup>50</p>
-                                <p class="plan-block-per">Per Month</p>
-                            </div>
-
-                            <div class="plan-bottom-part">
-                                <ul class="plan-block-features">
-                                    <li><span>5GB</span> Storage</li>
-                                    <li><span>20GB</span> Bandwidth</li>
-                                    <li><span>15</span> Databases</li>
-                                    <li><span>70</span> Email Accounts</li>
-                                </ul>
-
-                                <a class="button button-primary large" href="">Get Started</a>
-                            </div>
-
-                        </div>
-                    </div> <!-- end plan-wrap -->
-
-                </div>
-            </div> <!-- end pricing-table -->
-
-        </div> <!-- end pricing-content -->
-    </section> <!-- end pricing -->
-
-
-    <!-- Testimonials Section
-    ================================================== -->
-    <section id="testimonials">
-
+    <div class="col-eight pricing-table">
         <div class="row">
-            <div class="col-twelve">
-                <h1 class="intro-header" data-aos="fade-up">What They Say About Our App.</h1>
-            </div>
+
+            <div class="col-six plan-wrap">
+                <div class="plan-block" data-aos="fade-up">
+
+                    <div class="plan-top-part">
+                        <h3 class="plan-block-title">Lite Plan</h3>
+                        <p class="plan-block-price"><sup>$</sup>25</p>
+                        <p class="plan-block-per">Per Month</p>
+                    </div>
+
+                    <div class="plan-bottom-part">
+                        <ul class="plan-block-features">
+                            <li><span>3GB</span> Storage</li>
+                            <li><span>10GB</span> Bandwidth</li>
+                            <li><span>5</span> Databases</li>
+                            <li><span>30</span> Email Accounts</li>
+                        </ul>
+
+                        <a class="button button-primary large" href="">Get Started</a>
+                    </div>
+
+                </div>
+            </div> <!-- end plan-wrap -->
+
+            <div class="col-six plan-wrap">
+                <div class="plan-block primary" data-aos="fade-up">
+
+                    <div class="plan-top-part">
+                        <h3 class="plan-block-title">Pro Plan</h3>
+                        <p class="plan-block-price"><sup>$</sup>50</p>
+                        <p class="plan-block-per">Per Month</p>
+                    </div>
+
+                    <div class="plan-bottom-part">
+                        <ul class="plan-block-features">
+                            <li><span>5GB</span> Storage</li>
+                            <li><span>20GB</span> Bandwidth</li>
+                            <li><span>15</span> Databases</li>
+                            <li><span>70</span> Email Accounts</li>
+                        </ul>
+
+                        <a class="button button-primary large" href="">Get Started</a>
+                    </div>
+
+                </div>
+            </div> <!-- end plan-wrap -->
+
         </div>
+    </div> <!-- end pricing-table -->
 
-        <div class="row owl-wrap">
-
-            <div id="testimonial-slider"  data-aos="fade-up">
-
-                <div class="slides owl-carousel">
-
-                    <div>
-                        <p>
-                        Your work is going to fill a large part of your life, and the only way to be truly satisfied is
-                        to do what you believe is great work. And the only way to do great work is to love what you do.
-                        If you haven't found it yet, keep looking. Don't settle. As with all matters of the heart, you'll know when you find it.
-                        </p>
-
-                        <div class="testimonial-author">
-                                <img src="{{ url('Assets/images/avatars/user-02.jpg')}} " alt="Author image">
-                                <div class="author-info">
-                                    Steve Jobs
-                                    <span class="position">CEO, Apple.</span>
-                                </div>
-                        </div>
-                    </div>
-
-                    <div>
-                        <p>
-                        This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
-                        Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem
-                        nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris.
-                        </p>
-
-                        <div class="testimonial-author">
-                                <img src="{{ url('Assets/images/avatars/user-03.jpg')}} " alt="Author image">
-                                <div class="author-info">
-                                    John Doe
-                                    <span>CEO, ABC Corp.</span>
-                                </div>
-                        </div>
-                    </div>
-
-                </div> <!-- end slides -->
-
-            </div> <!-- end testimonial-slider -->
-
-        </div> <!-- end flex-container -->
-
-    </section> <!-- end testimonials -->
-
+</div> <!-- end pricing-content -->
+</section> <!-- end pricing -->
 
     <!-- download
     ================================================== -->

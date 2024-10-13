@@ -40,15 +40,6 @@ Route::get('/header', [App\Http\Controllers\Inventory\HeaderController::class, '
 Route::get('/baseboard', [App\Http\Controllers\Inventory\BaseboardController::class, 'baseboard'])->name('Inventory.baseboard');
 Route::get('/menu', [App\Http\Controllers\Inventory\MenuController::class, 'menu'])->name('Inventory.menu');
 
-    // Carries (Carregar)
-    Route::get('/home/inventory/carrieslist', [App\Http\Controllers\Inventory\CarriesForms\CarrieslistController::class, 'carrieslist'])->name('inventory.CarriesForms.carrieslist');
-    Route::get('/home/inventory/carrieslistauthor', [App\Http\Controllers\Inventory\CarriesForms\CarrieslistauthorController::class, 'carrieslistauthor'])->name('inventory.CarriesForms.carrieslistauthor');
-    Route::get('/home/inventory/carrieslistgenres', [App\Http\Controllers\Inventory\CarriesForms\CarrieslistgenresController::class, 'carrieslistgenres'])->name('inventory.CarriesForms.carrieslistgenres');
-    Route::get('/home/inventory/carrieslistspecies', [App\Http\Controllers\Inventory\CarriesForms\CarrieslistspeciesController::class, 'carrieslistspecies'])->name('inventory.CarriesForms.carrieslistspecies');
-    Route::get('/home/inventory/carrieslistepithet', [App\Http\Controllers\Inventory\CarriesForms\CarrieslistepithetController::class, 'carrieslistepithet'])->name('inventory.CarriesForms.carrieslistepithet');
-    Route::get('/home/inventory/carrieslistfamilies', [App\Http\Controllers\Inventory\CarriesForms\CarrieslistfamiliesController::class, 'carrieslistfamilies'])->name('inventory.CarriesForms.carrieslistfamilies');
-    Route::get('/home/inventory/carrieslistexoticnative', [App\Http\Controllers\Inventory\CarriesForms\CarrieslistexoticnativeController::class, 'carrieslistexoticnative'])->name('inventory.CarriesForms.carrieslistexoticnative');
-
     // Registrations (Cadastros)
     Route::get('/home/inventory/plant', function () {
         return redirect('/legacy/planta-formulario.php');

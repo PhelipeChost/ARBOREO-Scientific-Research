@@ -86,11 +86,6 @@
                         <span class="icon-play" aria-hidden="true"></span>
                         Mapa Unesp
                     </a>
-
-                    <div class="btn btn-info" style="color: white">
-                        <img src="{{ url('Assets/images/icons/exclamation.png')}}" alt="" width="20">
-                        Faça login para acessar nosso inventário!
-                    </div>
                 </div>
 
             </div>
@@ -121,6 +116,138 @@
     <!-- end home-social-list -->
 
 </section> <!-- end home -->
+
+<section id="about">
+
+        <div class="row about-intro">
+
+            <div class="col-four">
+                <h1 class="intro-header" data-aos="fade-up">Apresentação</h1>
+            </div>
+            <div class="col-eight">
+                <p class="lead" data-aos="fade-up">
+                    Esse é um projeto que nasceu para expor um antigo trabalho da Unesp de Ilha Solteira, Campus II. Aprecie enquanto é tempo e nos ajude deixar a região institucional dos Herbários mais arborizada!
+                </p>
+            </div>
+
+        </div>
+
+        <div class="row about-features" style="margin-bottom: 150px">
+
+            <div class="features-list block-1-3 block-m-1-2 block-mob-full group">
+
+                <div class="bgrid feature" data-aos="fade-up">
+
+                    <span class="icon"><i class="icon-window"></i></span>
+
+                    <div class="service-content">
+
+                        <h3>Plataforma Responsiva</h3>
+
+                        <p>Nosso inventário arbóreo é uma plataforma digital acessível e responsiva, 
+                            permitindo que os usuários visualizem o mapa e todas as informações de árvores 
+                            de forma otimizada em qualquer dispositivo, seja celular, tablet ou computador.</p>
+
+                    </div>
+
+                    </div> <!-- /bgrid -->
+
+                    <div class="bgrid feature" data-aos="fade-up">
+
+                        <span class="icon"><i class="icon-image"></i></span>
+
+                    <div class="service-content">
+                        <h3>Dados Precisos</h3>
+
+                        <p>As informações sobre a vegetação da Unesp exibidas no mapa são coletadas
+                             e verificadas, garantindo um alto nível de precisão. Todos os dados inseridos 
+                             e exibidos passam por um processo de atualização e validação, assegurando 
+                             que o usuário possa confiar plenamente nas informações disponíveis. Isso 
+                             garante que as visualizações no mapa representem fielmente a realidade da vegetação.
+                        </p>
+
+
+                    </div>
+
+                </div> <!-- /bgrid -->
+
+                <div class="bgrid feature" data-aos="fade-up">
+
+                    <span class="icon"><i class="icon-paint-brush"></i></span>
+
+                    <div class="service-content">
+                        <h3>Design Elegante</h3>
+
+                        <p>A plataforma oferece um design elegante, que combina simplicidade e sofisticação. A interface 
+                            é intuitiva e limpa, proporcionando uma navegação fluida e agradável. O uso de tons verdes, 
+                            reflete a conexão com a vegetação, criando uma experiência visual harmoniosa que une 
+                            funcionalidade e estilo. Esse visual moderno não apenas facilita o uso, mas também reforça 
+                            o elo com a natureza que a plataforma representa.
+                        </p>
+
+                    </div>
+
+            </div> <!-- end features-list -->
+
+        </div> <!-- end about-features -->
+
+    </section> <!-- end about -->
+
+<!-- Testimonials Section
+================================================== -->
+<section id="testimonials">
+
+<div class="row">
+    <div class="col-twelve">
+        <h1 class="intro-header" data-aos="fade-up">What They Say About Our App.</h1>
+    </div>
+</div>
+
+<div class="row owl-wrap">
+
+    <div id="testimonial-slider"  data-aos="fade-up">
+
+        <div class="slides owl-carousel">
+
+            <div>
+                <p>
+                Your work is going to fill a large part of your life, and the only way to be truly satisfied is
+                to do what you believe is great work. And the only way to do great work is to love what you do.
+                If you haven't found it yet, keep looking. Don't settle. As with all matters of the heart, you'll know when you find it.
+                </p>
+
+                <div class="testimonial-author">
+                        <img src="{{ url('Assets/images/avatars/user-02.jpg')}} " alt="Author image">
+                        <div class="author-info">
+                            Steve Jobs
+                            <span class="position">CEO, Apple.</span>
+                        </div>
+                </div>
+            </div>
+
+            <div>
+                <p>
+                This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
+                Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem
+                nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris.
+                </p>
+
+                <div class="testimonial-author">
+                        <img src="{{ url('Assets/images/avatars/user-03.jpg')}} " alt="Author image">
+                        <div class="author-info">
+                            John Doe
+                            <span>CEO, ABC Corp.</span>
+                        </div>
+                </div>
+            </div>
+
+        </div> <!-- end slides -->
+
+    </div> <!-- end testimonial-slider -->
+
+</div> <!-- end flex-container -->
+
+</section> <!-- end testimonials -->
 
 <!-- download
 ================================================== -->
