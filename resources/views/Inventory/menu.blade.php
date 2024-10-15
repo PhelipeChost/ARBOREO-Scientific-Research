@@ -18,9 +18,6 @@
             <a class="nav-link active" aria-current="page" href="{{ url('home')}}" style="font-weight: 600">HOME</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{ url('create')}}" style="color: red; font-weight: 600">Marcação</a>
-          </li>
-          <li class="nav-item">
             <a class="nav-link" href="{{ url('/home/inventory')}}">Inventário</a>
           </li>
           <li class="nav-item dropdown">

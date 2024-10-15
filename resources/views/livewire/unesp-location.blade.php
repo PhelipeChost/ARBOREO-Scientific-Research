@@ -11,9 +11,6 @@
         body { margin: 0; padding: 0; }
         #map { position: absolute; top: 0; bottom: 0; width: 100%;}
 
-        @media (max-width: 700px) {
-            #map { top: 0; bottom: 0; width: 700px; height: 1080px;}
-        }
 
         .mapboxgl-popup {
         max-width: 400px;
@@ -72,6 +69,11 @@
     </style>
 </head>
 <body>
+<div id="imageModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="expandedImage">
+</div>
+
 <div id="map"></div>
 
 <!-- Modal para exibir a imagem em tamanho expandido -->
